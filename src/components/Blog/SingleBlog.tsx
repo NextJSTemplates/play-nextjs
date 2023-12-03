@@ -1,16 +1,19 @@
 import { Blog } from "@/types/blog";
+import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, excerpt, date, slug } = blog;
+  const { title, coverImage, excerpt, date, slug } = blog;
+
+  console.log(coverImage);
 
   return (
     <div className="wow fadeInUp group mb-10" data-wow-delay=".1s">
       <div className="mb-8 overflow-hidden rounded">
         <Link href={`/blogs/${slug}`} aria-label="blog cover" className="block">
           <Image
-            src={image}
+            src={coverImage}
             alt="image"
             className="w-full transition group-hover:rotate-6 group-hover:scale-125"
             width={408}
@@ -19,18 +22,18 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
         </Link>
       </div>
       <div>
-        {/* <span className="bg-primary mb-5 inline-block rounded px-4 py-1 text-center text-xs font-semibold leading-loose text-white">
-          <div dangerouslySetInnerHTML={{ __html: date }}></div>
-        </span> */}
+        <span className="mb-5 inline-block rounded bg-primary px-4 py-1 text-center text-xs font-semibold leading-loose text-white">
+          {format(new Date(date), "dd MMM yyyy")}
+        </span>
         <h3>
           <Link
             href={`/blogs/${slug}`}
-            className="text-dark hover:text-primary dark:hover:text-primary mb-4 inline-block text-xl font-semibold dark:text-white sm:text-2xl lg:text-xl xl:text-2xl"
+            className="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
           >
             {title}
           </Link>
         </h3>
-        <p className="text-body-color dark:text-dark-6 text-base">{excerpt}</p>
+        <p className="text-base text-body-color dark:text-dark-6">{excerpt}</p>
       </div>
     </div>
   );

@@ -4,12 +4,13 @@ import SingleBlog from "@/components/Blog/SingleBlog";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { getAllPosts, getPostBySlug } from "@/utils/markdown";
 import markdownToHtml from "@/utils/markdownToHtml";
+import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
-// type Props = {
-//   params: { slug: string };
-// };
+type Props = {
+  params: { slug: string };
+};
 
 // export async function generateMetadata({ params }: Props) {
 //   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
@@ -52,25 +53,25 @@ import Link from "next/link";
 //   }
 // }
 
-type Metadata = {
-  title: string;
-  description?: string;
-  author: string;
-  robots: {
-    index: boolean;
-    follow: boolean;
-    nocache: boolean;
-    googleBot: {
-      index: boolean;
-      follow: boolean;
-      "max-video-preview": number;
-      "max-image-preview": string;
-      "max-snippet": number;
-    };
-  };
-};
+// type Metadata = {
+//   title: string;
+//   description?: string;
+//   author: string;
+//   robots: {
+//     index: boolean;
+//     follow: boolean;
+//     nocache: boolean;
+//     googleBot: {
+//       index: boolean;
+//       follow: boolean;
+//       "max-video-preview": number;
+//       "max-image-preview": string;
+//       "max-snippet": number;
+//     };
+//   };
+// };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }) {
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
   const post = getPostBySlug(params.slug, [
     "title",
@@ -83,7 +84,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const authorName = process.env.AUTHOR_NAME || "Your Author Name";
 
   if (post) {
-    const metadata: Metadata = {
+    const metadata = {
       title: `${post.title || "Single Post Page"} | ${siteName}`,
       author: authorName,
       robots: {
@@ -99,11 +100,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       },
     };
-
-    // Include description if available
-    if (post.metadata && post.metadata.description) {
-      metadata.description = post.metadata.description;
-    }
 
     return metadata;
   } else {
@@ -129,14 +125,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Post({ params }: Props) {
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-  const post = getPostBySlug(params.slug, ["title", "author", "content"]);
+  const post = getPostBySlug(params.slug, [
+    "title",
+    "author",
+    "authorImage",
+    "content",
+    "coverImage",
+    "date",
+  ]);
+
   const content = await markdownToHtml(post.content || "");
 
   return (
     <>
       <Breadcrumb pageName="Blog Details" />
 
-      <section className="dark:bg-dark pb-10 pt-20 lg:pb-20 lg:pt-[120px]">
+      <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4">
@@ -144,19 +148,19 @@ export default async function Post({ params }: Props) {
                 className="wow fadeInUp relative z-20 mb-[60px] h-[300px] overflow-hidden rounded md:h-[400px] lg:h-[500px]"
                 data-wow-delay=".1s"
               >
-                {/* <Image
-                  src={post.metadata.coverImage}
+                <Image
+                  src={post.coverImage}
                   alt="image"
                   width={1288}
                   height={500}
                   className="h-full w-full object-cover object-center"
-                /> */}
-                <div className="from-dark-700 absolute left-0 top-0 z-10 flex h-full w-full items-end bg-gradient-to-t to-transparent">
+                />
+                <div className="absolute left-0 top-0 z-10 flex h-full w-full items-end bg-gradient-to-t from-dark-700 to-transparent">
                   <div className="flex flex-wrap items-center p-4 pb-4 sm:p-8">
                     <div className="mb-4 mr-5 flex items-center md:mr-10">
                       <div className="mr-4 h-10 w-10 overflow-hidden rounded-full">
                         <Image
-                          src="/images/blog/author-01.png"
+                          src={post.authorImage}
                           alt="image"
                           className="w-full"
                           width={40}
@@ -166,7 +170,7 @@ export default async function Post({ params }: Props) {
                       <p className="text-base font-medium text-white">
                         By{" "}
                         <Link href="/#" className="text-white hover:opacity-70">
-                          Samuyl Joshi
+                          {post.author}
                         </Link>
                       </p>
                     </div>
@@ -184,7 +188,7 @@ export default async function Post({ params }: Props) {
                             <path d="M13.9998 2.6499H12.6998V2.0999C12.6998 1.7999 12.4498 1.5249 12.1248 1.5249C11.7998 1.5249 11.5498 1.7749 11.5498 2.0999V2.6499H4.4248V2.0999C4.4248 1.7999 4.1748 1.5249 3.8498 1.5249C3.5248 1.5249 3.2748 1.7749 3.2748 2.0999V2.6499H1.9998C1.1498 2.6499 0.424805 3.3499 0.424805 4.2249V12.9249C0.424805 13.7749 1.1248 14.4999 1.9998 14.4999H13.9998C14.8498 14.4999 15.5748 13.7999 15.5748 12.9249V4.1999C15.5748 3.3499 14.8498 2.6499 13.9998 2.6499ZM1.5748 7.2999H3.6998V9.7749H1.5748V7.2999ZM4.8248 7.2999H7.4498V9.7749H4.8248V7.2999ZM7.4498 10.8999V13.3499H4.8248V10.8999H7.4498V10.8999ZM8.5748 10.8999H11.1998V13.3499H8.5748V10.8999ZM8.5748 9.7749V7.2999H11.1998V9.7749H8.5748ZM12.2998 7.2999H14.4248V9.7749H12.2998V7.2999ZM1.9998 3.7749H3.2998V4.2999C3.2998 4.5999 3.5498 4.8749 3.8748 4.8749C4.1998 4.8749 4.4498 4.6249 4.4498 4.2999V3.7749H11.5998V4.2999C11.5998 4.5999 11.8498 4.8749 12.1748 4.8749C12.4998 4.8749 12.7498 4.6249 12.7498 4.2999V3.7749H13.9998C14.2498 3.7749 14.4498 3.9749 14.4498 4.2249V6.1749H1.5748V4.2249C1.5748 3.9749 1.7498 3.7749 1.9998 3.7749ZM1.5748 12.8999V10.8749H3.6998V13.3249H1.9998C1.7498 13.3499 1.5748 13.1499 1.5748 12.8999ZM13.9998 13.3499H12.2998V10.8999H14.4248V12.9249C14.4498 13.1499 14.2498 13.3499 13.9998 13.3499Z" />
                           </svg>
                         </span>
-                        26 Feb 2023
+                        {format(new Date(post.date), "dd MMM yyyy")}
                       </p>
 
                       <p className="mr-5 flex items-center text-sm font-medium text-white md:mr-6">
@@ -237,12 +241,12 @@ export default async function Post({ params }: Props) {
                     <div className="-mx-4 mb-8 flex flex-wrap">
                       <div className="w-full px-4">
                         <h2
-                          className="wow fadeInUp text-dark relative pb-5 text-2xl font-semibold dark:text-white sm:text-[28px]"
+                          className="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
                           data-wow-delay=".1s"
                         >
                           Popular Articles
                         </h2>
-                        <span className="bg-primary mb-10 inline-block h-[2px] w-20"></span>
+                        <span className="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
                       </div>
                       <PopularArticle
                         image="/images/blog/article-author-01.png"
@@ -290,10 +294,10 @@ export default async function Post({ params }: Props) {
               className="wow fadeInUp mt-14 w-full px-4"
               data-wow-delay=".2s"
             >
-              <h2 className="text-dark relative pb-5 text-2xl font-semibold dark:text-white sm:text-[28px]">
+              <h2 className="relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]">
                 Related Articles
               </h2>
-              <span className="bg-primary mb-10 inline-block h-[2px] w-20"></span>
+              <span className="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
             </div>
 
             {posts.slice(0, 3).map((blog) => (

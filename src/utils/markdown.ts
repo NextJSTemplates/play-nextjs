@@ -19,7 +19,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     [key: string]: string | object;
   };
 
-  const items: Items = {};
+  const items: any = {};
 
   function processImages(content: string) {
     // You can modify this function to handle image processing

@@ -56,7 +56,7 @@ const Header = () => {
       <header
         className={`ud-header left-0 top-0 z-40 flex w-full items-center ${
           sticky
-            ? "sticky-menu shadow-nav dark:bg-dark/10 dark:border-dark-3/20 fixed z-[9999] bg-white/80 backdrop-blur-[5px] transition dark:border-b"
+            ? "sticky-menu shadow-nav fixed z-[9999] bg-white/80 backdrop-blur-[5px] transition dark:border-b dark:border-dark-3/20 dark:bg-dark/10"
             : "absolute bg-transparent"
         }`}
       >
@@ -116,7 +116,7 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="ring-primary absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden"
+                  className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 ${
@@ -136,7 +136,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark-2 absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent ${
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark-2 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -149,7 +149,7 @@ const Header = () => {
                           <Link
                             scroll={false}
                             href={menuItem.path}
-                            className={`ud-menu-scroll group-hover:text-primary flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6  ${
+                            className={`ud-menu-scroll flex py-2 text-base group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6  ${
                               pathUrl === menuItem.path
                                 ? "text-primary"
                                 : "text-dark dark:text-white lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
@@ -166,12 +166,12 @@ const Header = () => {
                           <Link
                             href="/#"
                             onClick={() => handleSubmenu(index)}
-                            className="text-dark group-hover:text-primary relative flex py-2 text-base after:absolute after:right-1 after:top-1/2 after:mt-[-2px] after:h-2 after:w-2 after:-translate-y-1/2 after:rotate-45 after:border-b-2 after:border-r-2 after:border-current dark:text-white lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:after:right-0 lg:group-hover:text-white lg:group-hover:opacity-70"
+                            className="relative flex py-2 text-base text-dark after:absolute after:right-1 after:top-1/2 after:mt-[-2px] after:h-2 after:w-2 after:-translate-y-1/2 after:rotate-45 after:border-b-2 after:border-r-2 after:border-current group-hover:text-primary dark:text-white lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:after:right-0 lg:group-hover:text-white lg:group-hover:opacity-70"
                           >
                             {menuItem.title}
                           </Link>
                           <div
-                            className={`submenu dark:bg-dark-2 relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                            className={`submenu relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                               openIndex === index ? "!-left-[25px]" : "hidden"
                             }`}
                           >
@@ -182,7 +182,7 @@ const Header = () => {
                                 className={`block rounded px-4 py-[10px] text-sm ${
                                   pathUrl === submenuItem.path
                                     ? "text-primary"
-                                    : "text-body-color dark:text-dark-6 hover:text-primary dark:hover:text-primary"
+                                    : "text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                                 }`}
                               >
                                 {submenuItem.title}
@@ -205,7 +205,7 @@ const Header = () => {
                     </p>
                     <button
                       onClick={() => signOut()}
-                      className="signUpBtn hover:text-dark rounded-lg bg-white bg-opacity-20 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100"
+                      className="signUpBtn rounded-lg bg-white bg-opacity-20 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
                     >
                       Sign Out
                     </button>
@@ -220,7 +220,7 @@ const Header = () => {
                     </Link>
                     <Link
                       href="/auth/signup"
-                      className="signUpBtn hover:text-dark rounded-lg bg-white bg-opacity-20 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100"
+                      className="signUpBtn rounded-lg bg-white bg-opacity-20 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
                     >
                       Sign Up
                     </Link>

@@ -1,9 +1,21 @@
 "use client";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
-import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 
 const Pricing = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    const { data } = await axios.get("/api/getproducts");
+    setProducts(data);
+  };
+
   return (
     <section
       id="pricing"
@@ -20,6 +32,10 @@ const Pricing = () => {
         </div>
 
         <div className="-mx-4 flex flex-wrap justify-center">
+          {products.map((product, i) => (
+            <PricingBox key={1} product={product} />
+          ))}
+          {/*           
           <PricingBox
             popular={false}
             packageName="Lite"
@@ -63,7 +79,7 @@ const Pricing = () => {
             <OfferList text="Free updates" />
             <OfferList text="Use on 1 (one) project" />
             <OfferList text="3 Months support" />
-          </PricingBox>
+          </PricingBox> */}
         </div>
       </div>
     </section>
