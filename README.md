@@ -1,6 +1,6 @@
 Play Next.js is a free and open-source SaaS starter kit and boilerplate, designed for startups, SaaS companies, apps, businesses, and more. With its premium design and comprehensive collection of essential UI components and pages, it provides everything you need to kickstart a feature-rich SaaS website.
 
-### SaaS Boilerplate and Starter Kit for Next.js 🚀
+## SaaS Boilerplate and Starter Kit for Next.js 🚀
 Play Next.js SaaS Boilerplate and Starter Kit is a free, open-source solution ideal for startups, SaaS companies, and more. It offers essential UI components, authentication and database integration, and Stripe integration. Its superior design and functionality make it a go-to choice for launching a feature-rich SaaS website efficiently.
 
 
