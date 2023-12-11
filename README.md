@@ -6,7 +6,7 @@ Play Next.js is a free and **Open-source SaaS starter kit and boilerplate, desig
 ## SaaS Boilerplate and Starter Kit for Next.js 🚀
 Play Next.js SaaS Boilerplate and Starter Kit is a free, open-source solution ideal for startups, SaaS companies, and more. It offers essential UI components, authentication and database integration, and Stripe integration. Its superior design and functionality make it a go-to choice for launching a feature-rich SaaS website efficiently.
 
-### [🚀 View Live Demo](https://ply.nextjstemplates.com/)
+### [🚀 View Live Demo](https://play.nextjstemplates.com/)
 
 ### [🔌 Documentation](https://nextjstemplates.com/docs)
 
