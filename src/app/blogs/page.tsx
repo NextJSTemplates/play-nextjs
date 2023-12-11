@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Blog Grids | Play Free Next.js Template for Startup and SaaS By TailGrids",
+    "Blog Grids | Play SaaS Starter Kit and Boilerplate for Next.js",
   description: "Blog grids page description",
 };
 

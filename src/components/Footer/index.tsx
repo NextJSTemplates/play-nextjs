@@ -195,7 +195,7 @@ const Footer = () => {
                     href="/#"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    Ecommerce HTML
+                    Next.js Templates
                   </a>
                 </li>
                 <li>
@@ -296,7 +296,7 @@ const Footer = () => {
                     target="_blank"
                     className="text-gray-1 hover:underline"
                   >
-                    TailGrids and UIdeck
+                    TailGrids and Next.js Templates
                   </a>
                 </p>
               </div>

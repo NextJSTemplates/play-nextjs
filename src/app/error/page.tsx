@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title:
-    "404 Page | Play Free Next.js Template for Startup and SaaS By TailGrids",
+    "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
 };
 
 const ErrorPage = () => {

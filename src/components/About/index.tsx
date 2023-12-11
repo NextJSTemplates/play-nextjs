@@ -12,7 +12,7 @@ const About = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
                 <h2 className="text-dark mb-5 text-3xl font-bold leading-tight dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                  Brilliant Toolkit to Build Nextgen Website Faster.
+                  Brilliant Toolkit to Build Next.js SaaS Websites.
                 </h2>
                 <p className="text-body-color dark:text-dark-6 mb-10 text-base leading-relaxed">
                   The main thrust is to focus on educating attendees on how to

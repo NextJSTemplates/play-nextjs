@@ -16,11 +16,10 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
-                  Open-Source Web Template for SaaS, Startup, Apps, and More
+                Open-source SaaS Starter Kit and Boilerplate for Next.js
                 </h1>
                 <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                  Multidisciplinary Web Template Built with Your Favourite
-                  Technology - HTML Bootstrap, Tailwind and React NextJS.
+                Next.js SaaS Boilerplate and Starter Kit designed and built for SaaS startups. It comes with all necessary integrations, pages, and components you need to launch a feature-rich SaaS websites.
                 </p>
                 <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
                   <li>
@@ -33,7 +32,7 @@ const Hero = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://github.com/tailgrids/play-tailwind"
+                      href="https://github.com/nextjsTemplates/play-nextjs"
                       target="_blank"
                       className="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark"
                     >
@@ -60,8 +59,8 @@ const Hero = () => {
                 </ul>
 
                 <div>
-                  <p className="mb-4 text-center text-base font-medium text-white">
-                    Built with latest technology
+                  <p className="mb-4 text-center text-base font-medium text-white/60">
+                  Play is now available for all popular frameworks
                   </p>
                   <div
                     className="wow fadeInUp flex items-center justify-center gap-4 text-center"
