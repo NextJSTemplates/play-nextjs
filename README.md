@@ -1,12 +1,19 @@
 Play Next.js is a free and **Open-source SaaS starter kit and boilerplate, designed and built for SaaS startups**, apps, businesses, and more. With its premium design and essential collection of essential UI components and pages, it provides everything you need to kickstart a feature-rich SaaS website.
 
+
+[![Play Next.js](https://github.com/NextJSTemplates/play-nextjs/blob/main/play-nextjs.png)](https://play.nextjstemplates.com)
+
 ## SaaS Boilerplate and Starter Kit for Next.js 🚀
 Play Next.js SaaS Boilerplate and Starter Kit is a free, open-source solution ideal for startups, SaaS companies, and more. It offers essential UI components, authentication and database integration, and Stripe integration. Its superior design and functionality make it a go-to choice for launching a feature-rich SaaS website efficiently.
+
+### [🚀 View Live Demo](https://ply.nextjstemplates.com/)
+
+### [🔌 Documentation](https://nextjstemplates.com/docs)
 
 ### All Essential Integrations - DB, Auth, Payment, MDX, and more ⚡
 Play Next.js SaaS Starter kit includes all the key integrations required to build a fully functional SaaS platform.
 
-- **PostgreSQL for Database**: Comes with PostgreSQL support with Prisma, PostgreSQL is powerful and open-source relational database system ensures data integrity and reliability.
+- **PostgreSQL for Database**: Comes with PostgreSQL integration which is a powerful and open-source relational database system ensures data integrity and reliability.
 
 - **NextAuth for Authentication**: Play Next.js utilizes NextAuth, a versatile solution that provides secure login and user management.
 
@@ -21,10 +28,6 @@ This Next.js SaaS Boilerplate and Starter Kit is **styled using Tailwind CSS**, 
 
 Play Next.js SaaS boilerplate, you can enjoy a professional-looking website that offers seamless operation, all while significantly reducing your web development time and effort.
 ___
-
-### [📦 Download](https://nextjstemplates.com/templates/play)
-
-### [🔌 Documentation](https://nextjstemplates.com/docs)
 
 ### 🚀 Deploy Now
 
