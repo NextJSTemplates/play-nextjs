@@ -1,4 +1,4 @@
-import { TeamType } from "@/src/types/team";
+import { TeamType } from "@/types/team";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTeam from "./SingleTeam";
 

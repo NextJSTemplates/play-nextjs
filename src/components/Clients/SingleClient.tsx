@@ -1,21 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const SingleClient = (props: {
-  address: string;
-  image: string;
-  name: string;
-}) => {
-  const { address, image, name } = props;
+const SingleClient = ({ client }) => {
+  const { title, link, logo, logoWhite } = client;
   return (
     <div className="ud-single-logo mb-5 mr-10 max-w-[140px]">
-      <Link href={address} target="_blank" rel="nofollow noopner">
+      <Link href={link} target="_blank" rel="nofollow noopner">
         <Image
-          src={image}
-          alt={name}
+          src={logo}
+          alt={title}
+          className="dark:hidden"
           width={140}
           height={40}
-          className="grayscale duration-300 hover:filter-none"
+        />
+        <Image
+          src={logoWhite}
+          alt={title}
+          className="hidden dark:block"
+          width={140}
+          height={40}
         />
       </Link>
     </div>

@@ -1,4 +1,4 @@
-import { Testimonial } from "@/src/types/testimonial";
+import { Testimonial } from "@/types/testimonial";
 import Image from "next/image";
 const starIcon = (
   <svg width="18" height="16" viewBox="0 0 18 16" className="fill-current">

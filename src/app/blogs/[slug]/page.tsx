@@ -12,65 +12,6 @@ type Props = {
   params: { slug: string };
 };
 
-// export async function generateMetadata({ params }: Props) {
-//   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-//   const post = getPostBySlug(params.slug, [
-//     "title",
-//     "author",
-//     "content",
-//     "metadata",
-//   ]);
-
-//   console.log(post.metadata.coverImage);
-
-//   const siteName = process.env.SITE_NAME;
-//   const authorName = process.env.AUTHOR_NAME;
-
-//   if (post) {
-//     return {
-//       title: `${post.title || "Single Post Page"} | ${siteName}`,
-//       // description: `${post?.metadata.slice(0, 136)}...`,
-//       author: authorName,
-
-//       robots: {
-//         index: true,
-//         follow: true,
-//         nocache: true,
-//         googleBot: {
-//           index: true,
-//           follow: false,
-//           "max-video-preview": -1,
-//           "max-image-preview": "large",
-//           "max-snippet": -1,
-//         },
-//       },
-//     };
-//   } else {
-//     return {
-//       title: "Not Found",
-//       description: "No blog article has been found",
-//     };
-//   }
-// }
-
-// type Metadata = {
-//   title: string;
-//   description?: string;
-//   author: string;
-//   robots: {
-//     index: boolean;
-//     follow: boolean;
-//     nocache: boolean;
-//     googleBot: {
-//       index: boolean;
-//       follow: boolean;
-//       "max-video-preview": number;
-//       "max-image-preview": string;
-//       "max-snippet": number;
-//     };
-//   };
-// };
-
 export async function generateMetadata({ params }) {
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
   const post = getPostBySlug(params.slug, [
