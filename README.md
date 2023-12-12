@@ -76,4 +76,4 @@ Play is Free is completely free and open-source. Feel free to use it for both pe
 If you appreciate this project, please consider starring this repository. Your support encourages our team to continue creating more content like this and helps us to reach more users like you!
 
 ## Explore More Templates
-For a wider range of options, feel free to browse our collection of [Next.js Templates, Boilerblates and Starter Kits](https://nextjstemplates.com/templates).
+For a wider range of options, feel free to browse our collection of [Next.js Templates, Boilerplates and Starter Kits](https://nextjstemplates.com/templates).
