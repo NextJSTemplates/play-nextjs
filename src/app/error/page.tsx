@@ -3,8 +3,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title:
-    "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
+  title: "404 Page | Play SaaS Starter Kit and Boilerplate for Next.js",
 };
 
 const ErrorPage = () => {
@@ -16,10 +15,11 @@ const ErrorPage = () => {
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 md:w-5/12 lg:w-6/12">
-              <div className="mx-auto aspect-[129/138] max-w-[357px] text-center">
+              <div className="relative mx-auto aspect-[129/138] max-w-[357px] text-center">
                 <Image
                   src="/images/404.svg"
                   alt="image"
+                  fill
                   className="mx-auto max-w-full"
                 />
               </div>

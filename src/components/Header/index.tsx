@@ -5,21 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { onScroll } from "../../utils/scrollActive";
+
 import menuData from "./menuData";
 
 const Header = () => {
   const { data: session } = useSession();
-
-  useEffect(() => {
-    if (window.location.pathname === "/") {
-      window.addEventListener("scroll", onScroll);
-    }
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
 
   const pathUrl = usePathname();
   // Navbar toggle
@@ -121,18 +111,30 @@ const Header = () => {
                   className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                 >
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? " top-[7px] rotate-45" : " "
+                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
+                      pathUrl === "/" && sticky
+                        ? "bg-dark dark:bg-white"
+                        : "bg-white"
                     }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? "opacity-0 " : " "
+                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
+                      pathUrl === "/" && sticky
+                        ? "bg-dark dark:bg-white"
+                        : "bg-white"
                     }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-white transition-all duration-300 ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? " top-[-8px] -rotate-45" : " "
+                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
+                      pathUrl === "/" && sticky
+                        ? "bg-dark dark:bg-white"
+                        : "bg-white"
                     }`}
                   />
                 </button>
@@ -152,7 +154,9 @@ const Header = () => {
                             <Link
                               scroll={false}
                               href={menuItem.path}
-                              className={`ud-menu-scroll flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6`}
+                              className={`ud-menu-scroll flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6 ${
+                                pathUrl === menuItem?.path && "text-primary"
+                              }`}
                             >
                               {menuItem.title}
                             </Link>
@@ -164,6 +168,10 @@ const Header = () => {
                                 sticky
                                   ? "text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary"
                                   : "text-body-color dark:text-white lg:text-white"
+                              } ${
+                                pathUrl === menuItem?.path &&
+                                sticky &&
+                                "!text-primary"
                               }`}
                             >
                               {menuItem.title}

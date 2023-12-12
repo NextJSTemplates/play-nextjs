@@ -4,17 +4,17 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-gray-1 dark:bg-dark-2 pb-8 pt-20 lg:pb-[70px] lg:pt-[120px]"
+      className="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]"
     >
       <div className="container">
         <div className="wow fadeInUp" data-wow-delay=".2s">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
-                <h2 className="text-dark mb-5 text-3xl font-bold leading-tight dark:text-white sm:text-[40px] sm:leading-[1.2]">
+                <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
                   Brilliant Toolkit to Build Next.js SaaS Websites.
                 </h2>
-                <p className="text-body-color dark:text-dark-6 mb-10 text-base leading-relaxed">
+                <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
                   The main thrust is to focus on educating attendees on how to
                   best protect highly vulnerable business applications with
                   interactive panel discussions and roundtables led by subject
@@ -27,7 +27,7 @@ const About = () => {
 
                 <a
                   href="/#"
-                  className="border-primary bg-primary hover:border-blue-dark hover:bg-blue-dark inline-flex items-center justify-center rounded-md border px-7 py-3 text-center text-base font-medium text-white"
+                  className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
                 >
                   Know More
                 </a>
@@ -59,7 +59,7 @@ const About = () => {
                     />
                   </div>
 
-                  <div className="bg-primary relative z-10 mb-4 flex items-center justify-center overflow-hidden px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
+                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
                     <div>
                       <span className="block text-5xl font-extrabold text-white">
                         09

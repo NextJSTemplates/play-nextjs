@@ -5,17 +5,9 @@ import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { SessionProvider } from "next-auth/react";
 import { ThemeProvider } from "next-themes";
-import Prism from "prismjs";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
 import ToasterContext from "./api/contex/ToasetContex";
-
-function applyCodeHighlighting() {
-  const codeBlocks = document.querySelectorAll("pre");
-  codeBlocks.forEach((codeBlock) => {
-    Prism.highlightElement(codeBlock);
-  });
-}
 
 export default function RootLayout({
   children,

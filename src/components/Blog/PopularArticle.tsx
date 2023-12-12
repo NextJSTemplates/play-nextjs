@@ -13,13 +13,14 @@ const PopularArticle = (props: {
         className="wow fadeInUp mb-5 flex w-full items-center border-b border-stroke pb-5 dark:border-dark-3"
         data-wow-delay=".1s"
       >
-        <div className="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded-full">
+        <div className={`mr-5 overflow-hidden rounded`}>
           <Image
             src={image}
             alt="image"
-            className="w-full"
             width={80}
             height={80}
+            objectFit="cover"
+            objectPosition="center"
           />
         </div>
         <div className="w-full">

@@ -33,12 +33,12 @@ const SignUp = () => {
   };
 
   return (
-    <section className="dark:bg-dark bg-[#F4F7FF] py-14 lg:py-[90px]">
+    <section className="bg-[#F4F7FF] py-14 dark:bg-dark lg:py-[90px]">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
-              className="wow fadeInUp shadow-form dark:bg-dark-2 relative mx-auto max-w-[525px] overflow-hidden rounded-xl bg-white px-8 py-14 text-center sm:px-12 md:px-[60px]"
+              className="wow fadeInUp shadow-form relative mx-auto max-w-[525px] overflow-hidden rounded-xl bg-white px-8 py-14 text-center dark:bg-dark-2 sm:px-12 md:px-[60px]"
               data-wow-delay=".15s"
             >
               <div className="mb-10 text-center">
@@ -66,7 +66,7 @@ const SignUp = () => {
                     placeholder="Name"
                     name="name"
                     required
-                    className="border-stroke text-body-color placeholder:text-dark-6 focus:border-primary dark:border-dark-3 dark:text-dark-6 dark:focus:border-primary w-full rounded-md border bg-transparent px-5 py-3 text-base outline-none transition focus-visible:shadow-none"
+                    className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-dark-6 focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-white dark:focus:border-primary"
                   />
                 </div>
                 <div className="mb-[22px]">
@@ -75,7 +75,7 @@ const SignUp = () => {
                     placeholder="Email"
                     name="email"
                     required
-                    className="border-stroke text-body-color placeholder:text-dark-6 focus:border-primary dark:border-dark-3 dark:text-dark-6 dark:focus:border-primary w-full rounded-md border bg-transparent px-5 py-3 text-base outline-none transition focus-visible:shadow-none"
+                    className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-dark-6 focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-white dark:focus:border-primary"
                   />
                 </div>
                 <div className="mb-[22px]">
@@ -84,21 +84,21 @@ const SignUp = () => {
                     placeholder="Password"
                     name="password"
                     required
-                    className="border-stroke text-body-color placeholder:text-dark-6 focus:border-primary dark:border-dark-3 dark:text-dark-6 dark:focus:border-primary w-full rounded-md border bg-transparent px-5 py-3 text-base outline-none transition focus-visible:shadow-none"
+                    className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-dark-6 focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-white dark:focus:border-primary"
                   />
                 </div>
                 <div className="mb-9">
                   <button
                     type="submit"
-                    className="border-primary bg-primary hover:bg-blue-dark w-full cursor-pointer rounded-md border px-5 py-3 text-base text-white transition duration-300 ease-in-out"
+                    className="w-full cursor-pointer rounded-md border border-primary bg-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:bg-blue-dark"
                   >
                     Sign Up
                   </button>
                 </div>
               </form>
               <span className="z-1 relative mb-7 block text-center">
-                <span className="-z-1 bg-stroke dark:bg-dark-3 absolute left-0 top-1/2 block h-px w-full"></span>
-                <span className="text-body-secondary dark:bg-dark-2 relative z-10 inline-block bg-white px-3 text-base">
+                <span className="-z-1 absolute left-0 top-1/2 block h-px w-full bg-stroke dark:bg-dark-3"></span>
+                <span className="text-body-secondary relative z-10 inline-block bg-white px-3 text-base dark:bg-dark-2">
                   Connect With
                 </span>
               </span>

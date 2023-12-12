@@ -220,40 +220,42 @@ const Footer = () => {
           <div className="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
             <div className="mb-10 w-full">
               <h4 className="mb-9 text-lg font-semibold text-white">
-                Latest blog
+                Useful Links
               </h4>
-              <div className="flex flex-col gap-8">
-                <a
-                  href="blog-details.html"
-                  className="group flex items-center gap-[22px]"
-                >
-                  <div className="relative aspect-[35/24] w-[70px] overflow-hidden rounded">
-                    <Image
-                      src="/images/blog/blog-footer-01.jpg"
-                      alt="blog"
-                      fill
-                    />
-                  </div>
-                  <span className="max-w-[180px] text-base text-gray-7 group-hover:text-white">
-                    I think really important to design with...
-                  </span>
-                </a>
-                <a
-                  href="blog-details.html"
-                  className="group flex items-center gap-[22px]"
-                >
-                  <div className="relative aspect-[35/24] w-[70px] overflow-hidden rounded">
-                    <Image
-                      src="/images/blog/blog-footer-02.jpg"
-                      alt="blog"
-                      fill
-                    />
-                  </div>
-                  <span className="max-w-[180px] text-base text-gray-7 group-hover:text-white">
-                    Recognizing the need is the primary...
-                  </span>
-                </a>
-              </div>
+              <ul>
+                <li>
+                  <a
+                    href="/#"
+                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                  >
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#"
+                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                  >
+                    Blogs
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#"
+                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                  >
+                    Support
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#"
+                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                  >
+                    About
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

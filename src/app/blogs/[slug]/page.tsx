@@ -189,27 +189,14 @@ export default async function Post({ params }: Props) {
                         </h2>
                         <span className="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
                       </div>
-                      <PopularArticle
-                        image="/images/blog/article-author-01.png"
-                        title="Create engaging online courses your student…"
-                        name="Glomiya Lucy"
-                      />
-                      <PopularArticle
-                        image="/images/blog/article-author-02.png"
-                        title="The ultimate formula for launching online course"
-                        name="Andrio jeson"
-                      />
-                      <PopularArticle
-                        image="/images/blog/article-author-03.png"
-                        title="50 Best web design tips & tricks that will help you"
-                        name="Samoyel Dayno"
-                      />
-                      <PopularArticle
-                        image="/images/blog/article-author-04.png"
-                        title="The 8 best landing page builders, reviewed"
-                        name="Andrio Glori"
-                      />
-                      Newsletter
+                      {posts.slice(0, 3).map((blog, i) => (
+                        <PopularArticle
+                          key={i}
+                          image={blog?.coverImage}
+                          title={blog?.title.slice(0, 30)}
+                          name={blog?.author}
+                        />
+                      ))}
                     </div>
 
                     <div
