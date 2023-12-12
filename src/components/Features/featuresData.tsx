@@ -38,7 +38,7 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "Multipurpose Template",
+    title: "Modern Design",
     paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
     btn: "Learn More",
     btnLink: "/#",
@@ -91,7 +91,7 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "High-quality Design",
+    title: "SaaS Starter Kit",
     paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
     btn: "Learn More",
     btnLink: "/#",
@@ -124,7 +124,7 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "All Essential Elements",
+    title: "All Essential Integrations",
     paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
     btn: "Learn More",
     btnLink: "/#",
