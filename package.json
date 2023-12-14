@@ -6,26 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "xata:codegen": "npx @xata.io/cli codegen"
-  },
-  "engines": {
-    "node": "20.10.0"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@auth/xata-adapter": "^0.1.7",
-    "@next-auth/xata-adapter": "^0.2.2",
-    "@xata.io/client": "^0.28.0",
+    "@auth/prisma-adapter": "^1.0.11",
+    "@prisma/client": "^5.7.0",
     "axios": "^1.6.2",
-    "bcrypt": "^5.1.1",
+    "bcrypt": "^5.0.1",
     "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
-    "next": "14.0.3",
+    "next": "^13.5.6",
     "next-auth": "^4.24.5",
     "next-themes": "^0.2.1",
-    "node": "20.10.0",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
+    "prisma": "^5.7.0",
     "prismjs": "^1.29.0",
     "react": "^18",
     "react-dom": "^18",

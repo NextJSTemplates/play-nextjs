@@ -1,6 +1,0 @@
-{
-  "databaseURL": "https://shafiq-s-workspace-01oop1.eu-central-1.xata.sh/db/play-nextjs-users",
-  "codegen": {
-    "output": "src/xata.ts"
-  }
-}

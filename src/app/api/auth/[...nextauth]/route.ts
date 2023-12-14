@@ -1,28 +1,18 @@
-import {
-  NextauthUsers,
-  XataClient,
-  getXataClient,
-} from "@/utils/xata.codegen.server";
-import { XataAdapter } from "@auth/xata-adapter";
 import bcrypt from "bcrypt";
 import NextAuth, { DefaultSession, type NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
-
-declare module "next-auth" {
-  interface Session extends DefaultSession {
-    user: NextauthUsers & DefaultSession["user"];
-  }
-}
-
-const client = new XataClient();
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import { PrismaClient } from "@prisma/client";
+ 
+ const client = new PrismaClient();
 
 export const authOptions: NextAuthOptions = {
   pages: {
     signIn: "/auth/signin",
   },
-  adapter: XataAdapter(client),
+  adapter: PrismaAdapter(client),
   secret: process.env.SECRET,
   session: {
     strategy: "jwt",
@@ -44,10 +34,11 @@ export const authOptions: NextAuthOptions = {
         }
 
         // check to see if user already exist
-        const xata = getXataClient();
-        const user = await xata.db.nextauth_users
-          .filter({ email: credentials?.email })
-          .getFirst();
+        const user = await client.user.findUnique({
+          where: {
+            email: credentials.email,
+          },
+        });
 
         // if user was not found
         if (!user || !user?.password) {
@@ -60,7 +51,7 @@ export const authOptions: NextAuthOptions = {
           user.password,
         );
 
-        console.log(passwordMatch);
+        // console.log(passwordMatch);
 
         if (!passwordMatch) {
           console.log("test", passwordMatch);
@@ -72,13 +63,13 @@ export const authOptions: NextAuthOptions = {
     }),
 
     GitHubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID as string,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
 
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
 
