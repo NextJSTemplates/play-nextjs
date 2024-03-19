@@ -12,7 +12,7 @@ type Props = {
   params: { slug: string };
 };
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: Props) {
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
   const post = getPostBySlug(params.slug, [
     "title",

@@ -1,4 +1,5 @@
-export const clientsData = [
+import { Client } from "@/types/client";
+export const clientsData: Client[] = [
   {
     id: 1,
     title: "GrayGrids",
