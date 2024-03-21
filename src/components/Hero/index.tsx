@@ -213,7 +213,6 @@ const Hero = () => {
                     className="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                     width={845}
                     height={316}
-                    loading="eager"
                   />
                 </div>
                 <div className="absolute -left-9 bottom-0 z-[-1]">
