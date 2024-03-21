@@ -45,8 +45,8 @@ const Testimonials = () => {
         />
 
         <div className="mt-[60px] flex flex-wrap lg:mt-20">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+          {testimonialData.map((testimonial, i) => (
+            <SingleTestimonial key={i} testimonial={testimonial} />
           ))}
         </div>
       </div>

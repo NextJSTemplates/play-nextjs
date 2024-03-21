@@ -79,3 +79,14 @@ If you appreciate this project, please consider starring this repository. Your s
 
 ## Explore More Templates
 For a wider range of options, feel free to browse our collection of [Next.js Templates, Boilerplates and Starter Kits](https://nextjstemplates.com/templates).
+
+### Update Log
+**21 March 2024**
+- Upgraded to Next.js 14
+- Updated stripe integration
+- Fixed auth issues
+- Updated all the packages
+- Update ts config & fix all the issues
+- Update signin & signup page Design
+- Integrated Magic link signin
+- & Forgot password
