@@ -1,22 +1,11 @@
 import axios from "axios";
 import React from "react";
 import OfferList from "./OfferList";
+import { Price } from "@/types/price";
 
-interface PricingBoxProps {
-  price: any;
-  purchaseLink: string;
-  packageName: string;
-  btn: string;
-  popular?: boolean;
-  subtitle: string;
-  children: React.ReactNode;
-}
-
-const PricingBox = ({ product }) => {
-  const {} = product;
-
+const PricingBox = ({ product }: { product: Price }) => {
   // POST request
-  const handleSubscription = async (e) => {
+  const handleSubscription = async (e: any) => {
     e.preventDefault();
     const { data } = await axios.post(
       "/api/payment",
@@ -64,36 +53,9 @@ const PricingBox = ({ product }) => {
             Features
           </h3>
           <div className="mb-10">
-            {product.nickname === "Basic" && (
-              <>
-                <OfferList text="1 User" />
-                <OfferList text="All UI components" />
-                <OfferList text="Lifetime access" />
-                <OfferList text="Free updates" />
-                <OfferList text="Use on 1 (one) project" />
-                <OfferList text="3 Months support" />
-              </>
-            )}
-            {product.nickname === "Premium" && (
-              <>
-                <OfferList text="10 Users" />
-                <OfferList text="All UI components" />
-                <OfferList text="Lifetime access" />
-                <OfferList text="Free updates" />
-                <OfferList text="Use on 20 projects" />
-                <OfferList text="3 Years support" />
-              </>
-            )}
-            {product.nickname === "Business" && (
-              <>
-                <OfferList text="Unlimited Users" />
-                <OfferList text="All UI components" />
-                <OfferList text="Lifetime access" />
-                <OfferList text="Free updates" />
-                <OfferList text="Use on unlimited project" />
-                <OfferList text="Lifetime support" />
-              </>
-            )}
+            {product?.offers.map((offer, i) => (
+              <OfferList key={i} text={offer} />
+            ))}
           </div>
         </div>
         <div className="w-full">

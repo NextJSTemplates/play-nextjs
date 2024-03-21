@@ -3,18 +3,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import PricingBox from "./PricingBox";
+import { pricingData } from "@/stripe/pricingData";
 
 const Pricing = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  const fetchProducts = async () => {
-    const { data } = await axios.get("/api/getproducts");
-    setProducts(data);
-  };
 
   return (
     <section
@@ -32,54 +23,9 @@ const Pricing = () => {
         </div>
 
         <div className="-mx-4 flex flex-wrap justify-center">
-          {products.map((product, i) => (
-            <PricingBox key={1} product={product} />
-          ))}
-          {/*           
-          <PricingBox
-            popular={false}
-            packageName="Lite"
-            price="19.99"
-            subtitle="STARTING FROM"
-            btn="Purchase Now"
-            purchaseLink="/#"
-          >
-            <OfferList text="1 User" />
-            <OfferList text="All UI components" />
-            <OfferList text="Lifetime access" />
-            <OfferList text="Free updates" />
-            <OfferList text="Use on 1 (one) project" />
-            <OfferList text="3 Months support" />
-          </PricingBox>
-          <PricingBox
-            popular={true}
-            packageName="Basic"
-            price="19.99"
-            subtitle="STARTING FROM"
-            btn="Purchase Now"
-            purchaseLink="/#"
-          >
-            <OfferList text="1 User" />
-            <OfferList text="All UI components" />
-            <OfferList text="Lifetime access" />
-            <OfferList text="Free updates" />
-            <OfferList text="Use on 1 (one) project" />
-            <OfferList text="3 Months support" />
-          </PricingBox>
-          <PricingBox
-            packageName="Plus"
-            price="70.99"
-            subtitle="STARTING FROM"
-            btn="Purchase Now"
-            purchaseLink="/#"
-          >
-            <OfferList text="1 User" />
-            <OfferList text="All UI components" />
-            <OfferList text="Lifetime access" />
-            <OfferList text="Free updates" />
-            <OfferList text="Use on 1 (one) project" />
-            <OfferList text="3 Months support" />
-          </PricingBox> */}
+          {pricingData.map((product, i) => (
+            <PricingBox key={i} product={product} />
+          ))}     
         </div>
       </div>
     </section>

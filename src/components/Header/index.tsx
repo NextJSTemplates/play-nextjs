@@ -16,7 +16,7 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
-  }; 
+  };
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
@@ -48,7 +48,7 @@ const Header = () => {
       <header
         className={`ud-header left-0 top-0 z-40 flex w-full items-center ${
           sticky
-            ? "shadow-nav fixed z-[9999] border-b border-stroke bg-white/80 backdrop-blur-[5px] transition dark:border-dark-3/20 dark:bg-dark/10"
+            ? "shadow-nav fixed z-[999] border-b border-stroke bg-white/80 backdrop-blur-[5px] transition dark:border-dark-3/20 dark:bg-dark/10"
             : "absolute bg-transparent"
         }`}
       >
@@ -149,7 +149,7 @@ const Header = () => {
                   <ul className="block lg:ml-8 lg:flex lg:gap-x-8 xl:ml-14 xl:gap-x-12">
                     {menuData.map((menuItem, index) =>
                       menuItem.path ? (
-                        <li key={menuItem.id} className="group relative">
+                        <li key={index} className="group relative">
                           {pathUrl !== "/" ? (
                             <Link
                               scroll={false}
@@ -240,7 +240,7 @@ const Header = () => {
                               openIndex === index ? "!-left-[25px]" : "hidden"
                             }`}
                           >
-                            {menuItem.submenu.map((submenuItem: any) => (
+                            {menuItem?.submenu?.map((submenuItem: any) => (
                               <Link
                                 href={submenuItem.path}
                                 key={submenuItem.id}
@@ -311,21 +311,20 @@ const Header = () => {
                       >
                         Sign Out
                       </button>
-                    )
-                    }
+                    )}
                   </>
                 ) : (
                   <>
                     {pathUrl !== "/" ? (
                       <>
                         <Link
-                          href="/auth/signin"
+                          href="/signin"
                           className="px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white"
                         >
                           Sign In
                         </Link>
                         <Link
-                          href="/auth/signup"
+                          href="/signup"
                           className="rounded-lg bg-primary px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
                         >
                           Sign Up
@@ -334,7 +333,7 @@ const Header = () => {
                     ) : (
                       <>
                         <Link
-                          href="/auth/signin"
+                          href="/signin"
                           className={`px-7 py-3 text-base font-medium hover:opacity-70 ${
                             sticky ? "text-dark dark:text-white" : "text-white"
                           }`}
@@ -342,7 +341,7 @@ const Header = () => {
                           Sign In
                         </Link>
                         <Link
-                          href="/auth/signup"
+                          href="/signup"
                           className={`rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out ${
                             sticky
                               ? "bg-primary hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"

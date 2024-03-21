@@ -6,14 +6,12 @@ import Link from "next/link";
 const SingleBlog = ({ blog }: { blog: Blog }) => {
   const { title, coverImage, excerpt, date, slug } = blog;
 
-  console.log(coverImage);
-
   return (
     <div className="wow fadeInUp group mb-10" data-wow-delay=".1s">
       <div className="mb-8 overflow-hidden rounded">
         <Link href={`/blogs/${slug}`} aria-label="blog cover" className="block">
           <Image
-            src={coverImage}
+            src={coverImage!}
             alt="image"
             className="w-full transition group-hover:rotate-6 group-hover:scale-125"
             width={408}
