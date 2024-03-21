@@ -59,8 +59,8 @@ const Team = () => {
         </div>
 
         <div className="-mx-4 flex flex-wrap justify-center">
-          {teamData.map((team) => (
-            <SingleTeam key={team.id} team={team} />
+          {teamData.map((team, i) => (
+            <SingleTeam key={i} team={team} />
           ))}
         </div>
       </div>

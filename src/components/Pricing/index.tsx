@@ -1,12 +1,9 @@
 "use client";
-import axios from "axios";
-import { useEffect, useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import PricingBox from "./PricingBox";
 import { pricingData } from "@/stripe/pricingData";
 
 const Pricing = () => {
-
   return (
     <section
       id="pricing"

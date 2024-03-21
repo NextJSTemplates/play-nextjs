@@ -66,14 +66,14 @@ const Header = () => {
                     <Image
                       src={`/images/logo/logo.svg`}
                       alt="logo"
-                      width={140}
+                      width={240}
                       height={30}
                       className="header-logo w-full dark:hidden"
                     />
                     <Image
                       src={`/images/logo/logo-white.svg`}
                       alt="logo"
-                      width={140}
+                      width={240}
                       height={30}
                       className="header-logo hidden w-full dark:block"
                     />
@@ -152,6 +152,7 @@ const Header = () => {
                         <li key={index} className="group relative">
                           {pathUrl !== "/" ? (
                             <Link
+                              onClick={navbarToggleHandler}
                               scroll={false}
                               href={menuItem.path}
                               className={`ud-menu-scroll flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6 ${
@@ -179,10 +180,7 @@ const Header = () => {
                           )}
                         </li>
                       ) : (
-                        <li
-                          className="submenu-item group relative"
-                          key={menuItem.id}
-                        >
+                        <li className="submenu-item group relative" key={index}>
                           {pathUrl !== "/" ? (
                             <button
                               onClick={() => handleSubmenu(index)}
@@ -240,10 +238,10 @@ const Header = () => {
                               openIndex === index ? "!-left-[25px]" : "hidden"
                             }`}
                           >
-                            {menuItem?.submenu?.map((submenuItem: any) => (
+                            {menuItem?.submenu?.map((submenuItem: any, i) => (
                               <Link
                                 href={submenuItem.path}
-                                key={submenuItem.id}
+                                key={i}
                                 className={`block rounded px-4 py-[10px] text-sm ${
                                   pathUrl === submenuItem.path
                                     ? "text-primary"

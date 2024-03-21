@@ -11,7 +11,7 @@ const ErrorPage = () => {
     <>
       <Breadcrumb pageName="404 Page" />
 
-     <NotFound/>
+      <NotFound />
     </>
   );
 };

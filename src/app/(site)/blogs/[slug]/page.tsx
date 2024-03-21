@@ -228,9 +228,9 @@ export default async function Post({ params }: Props) {
               <span className="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
             </div>
 
-            {posts.slice(0, 3).map((blog) => (
+            {posts.slice(0, 3).map((blog, key) => (
               <div
-                key={blog.id}
+                key={key}
                 className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
               >
                 <SingleBlog blog={blog} />
