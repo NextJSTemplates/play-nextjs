@@ -15,8 +15,8 @@ const SingleTeam = ({ team }: { team: TeamType }) => {
             width={120}
             height={120}
           />
-          <span className="remove-transiton-all absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-secondary opacity-0 group-hover:opacity-100"></span>
-          <span className="remove-transiton-all absolute right-0 top-0 -z-10 opacity-0 group-hover:opacity-100">
+          <span className="absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-secondary opacity-0 transition-all group-hover:opacity-100"></span>
+          <span className="absolute right-0 top-0 -z-10 opacity-0 transition-all group-hover:opacity-100">
             <svg
               width="55"
               height="53"

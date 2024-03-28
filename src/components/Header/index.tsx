@@ -111,7 +111,7 @@ const Header = () => {
                   className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                 >
                   <span
-                    className={`remove-transiton-all relative my-1.5 block h-0.5 w-[30px] duration-300 ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? " top-[7px] rotate-45" : " "
                     } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
                       pathUrl === "/" && sticky
@@ -120,7 +120,7 @@ const Header = () => {
                     }`}
                   />
                   <span
-                    className={`remove-transiton-all relative my-1.5 block h-0.5 w-[30px] duration-300 ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? "opacity-0 " : " "
                     } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
                       pathUrl === "/" && sticky
@@ -129,7 +129,7 @@ const Header = () => {
                     }`}
                   />
                   <span
-                    className={`remove-transiton-all relative my-1.5 block h-0.5 w-[30px] duration-300 ${
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? " top-[-8px] -rotate-45" : " "
                     } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
                       pathUrl === "/" && sticky
@@ -234,7 +234,7 @@ const Header = () => {
                           )}
 
                           <div
-                            className={`submenu remove-transiton-[top] relative left-0 top-full w-[250px] rounded-sm bg-white p-4 duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                            className={`submenu relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                               openIndex === index ? "!-left-[25px]" : "hidden"
                             }`}
                           >

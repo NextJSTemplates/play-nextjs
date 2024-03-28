@@ -21,7 +21,7 @@ const CallToAction = () => {
                 </p>
                 <Link
                   href="/"
-                  className="remove-transiton inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white hover:bg-[#0BB489]"
+                  className="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"
                 >
                   Start using Play
                 </Link>
