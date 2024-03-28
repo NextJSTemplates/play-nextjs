@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const CallToAction = () => {
   return (
-    <section className="bg-primary relative z-10 overflow-hidden py-20 lg:py-[115px]">
+    <section className="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
       <div className="container mx-auto">
         <div className="relative overflow-hidden">
           <div className="-mx-4 flex flex-wrap items-stretch">
@@ -21,7 +21,7 @@ const CallToAction = () => {
                 </p>
                 <Link
                   href="/"
-                  className="bg-secondary inline-block rounded-md border border-transparent px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"
+                  className="remove-transiton inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white hover:bg-[#0BB489]"
                 >
                   Start using Play
                 </Link>

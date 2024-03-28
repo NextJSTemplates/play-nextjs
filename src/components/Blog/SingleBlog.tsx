@@ -13,7 +13,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           <Image
             src={coverImage!}
             alt="image"
-            className="w-full transition group-hover:rotate-6 group-hover:scale-125"
+            className="remove-transiton w-full group-hover:rotate-6 group-hover:scale-125"
             width={408}
             height={272}
           />

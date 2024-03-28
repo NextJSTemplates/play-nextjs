@@ -19,7 +19,7 @@ const Newsletter = () => {
         <input
           type="submit"
           value="Subscribe Now"
-          className="mb-4 h-[50px] w-full cursor-pointer rounded-md bg-secondary text-center text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-[#0BB489] hover:bg-opacity-90"
+          className="remove-transiton mb-4 h-[50px] w-full cursor-pointer rounded-md bg-secondary text-center text-sm font-medium text-white duration-300 ease-in-out hover:bg-[#0BB489] hover:bg-opacity-90"
         />
       </form>
       <p className="text-sm font-medium text-white">
