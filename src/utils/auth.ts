@@ -43,7 +43,7 @@ export const authOptions: NextAuthOptions = {
 
         // if user was not found
         if (!user || !user?.password) {
-          throw new Error("In valid email or password");
+          throw new Error("Invalid email or password");
         }
 
         // check to see if passwords match
