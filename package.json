@@ -29,7 +29,7 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "stripe": "^14.7.0",
-    "tailgrids": "^2.1.0"
+    "tailgrids": "^2.2.7"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
