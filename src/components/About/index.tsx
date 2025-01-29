@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -25,12 +26,12 @@ const About = () => {
                   interactive panel.
                 </p>
 
-                <a
-                  href="/#"
+                <Link
+                  href="#"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
                 >
                   Know More
-                </a>
+                </Link>
               </div>
             </div>
 

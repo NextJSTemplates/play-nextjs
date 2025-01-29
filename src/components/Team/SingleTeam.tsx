@@ -1,5 +1,6 @@
 import { TeamType } from "@/types/team";
 import Image from "next/image";
+import Link from "next/link";
 
 const SingleTeam = ({ team }: { team: TeamType }) => {
   const { image, name, designation, facebookLink, twitterLink, instagramLink } =
@@ -245,7 +246,7 @@ const SingleTeam = ({ team }: { team: TeamType }) => {
             {designation}
           </p>
           <div className="flex items-center justify-center gap-5">
-            <a
+            <Link
               aria-label="social link"
               href={facebookLink}
               className="text-dark-6 hover:text-primary"
@@ -263,8 +264,8 @@ const SingleTeam = ({ team }: { team: TeamType }) => {
                   fill=""
                 />
               </svg>
-            </a>
-            <a
+            </Link>
+            <Link
               aria-label="social link"
               href={twitterLink}
               className="text-dark-6 hover:text-primary"
@@ -282,8 +283,8 @@ const SingleTeam = ({ team }: { team: TeamType }) => {
                   fill=""
                 />
               </svg>
-            </a>
-            <a
+            </Link>
+            <Link
               aria-label="social link"
               href={instagramLink}
               className="text-dark-6 hover:text-primary"
@@ -309,7 +310,7 @@ const SingleTeam = ({ team }: { team: TeamType }) => {
                   fill=""
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

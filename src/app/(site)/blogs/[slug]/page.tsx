@@ -9,17 +9,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "author",
-    "content",
-    "metadata",
-  ]);
+  const post = getPostBySlug(slug, ["title", "author", "content", "metadata"]);
 
   const siteName = process.env.SITE_NAME || "Your Site Name";
   const authorName = process.env.AUTHOR_NAME || "Your Author Name";
@@ -65,8 +62,9 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function Post({ params }: Props) {
+  const { slug } = await params;
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-  const post = getPostBySlug(params.slug, [
+  const post = getPostBySlug(slug, [
     "title",
     "author",
     "authorImage",
@@ -229,10 +227,7 @@ export default async function Post({ params }: Props) {
             </div>
 
             {posts.slice(0, 3).map((blog, key) => (
-              <div
-                key={key}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
-              >
+              <div key={key} className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3">
                 <SingleBlog blog={blog} />
               </div>
             ))}
