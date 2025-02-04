@@ -12,13 +12,13 @@ const Footer = () => {
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
             <div className="mb-10 w-full">
               <Link href="/" className="mb-6 inline-block max-w-[160px]">
-                <Image
+                {/* <Image
                   src="/images/logo/logo-white.svg"
                   alt="logo"
                   width={140}
                   height={30}
                   className="max-w-full"
-                />
+                /> */}
               </Link>
               <p className="mb-8 max-w-[270px] text-base text-gray-7">
                 We create digital experiences for brands and companies by using
@@ -94,7 +94,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+          {/* <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-10 w-full">
               <h4 className="mb-9 text-lg font-semibold text-white">
                 About Us
@@ -257,7 +257,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -266,7 +266,7 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-2/3 lg:w-1/2">
               <div className="my-1">
-                <div className="-mx-3 flex items-center justify-center md:justify-start">
+                {/* <div className="-mx-3 flex items-center justify-center md:justify-start">
                   <Link
                     href="#"
                     className="px-3 text-base text-gray-7 hover:text-white hover:underline"
@@ -285,20 +285,19 @@ const Footer = () => {
                   >
                     Terms of service
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
-            <div className="w-full px-4 md:w-1/3 lg:w-1/2">
+            <div className="w-full px-4 md:w-1/3 lg:w-1/2  justify-center md:justify-end">
               <div className="my-1 flex justify-center md:justify-end">
-                <p className="text-base text-gray-7">
-                  Designed and Developed by{" "}
+                <p className="text-base text-gray-7 justify-center md:justify-end">
+                © 2025 Human Computer Interactions & Persuasive Technologies Laboratory {"  "}
                   <Link
-                    href="https://tailgrids.com"
+                    href="https://instagram.com/cyphahimself"
                     rel="nofollow noopner noreferrer"
                     target="_blank"
                     className="text-gray-1 hover:underline"
                   >
-                    TailGrids and Next.js Templates
                   </Link>
                 </p>
               </div>

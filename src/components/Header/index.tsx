@@ -55,7 +55,7 @@ const Header = () => {
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
-              <Link
+              {/* <Link
                 href="/"
                 className={`navbar-logo block w-full ${
                   sticky ? "py-2" : "py-5"
@@ -100,7 +100,7 @@ const Header = () => {
                     />
                   </>
                 )}
-              </Link>
+              </Link> */}
             </div>
             <div className="flex w-full items-center justify-between px-4">
               <div>
