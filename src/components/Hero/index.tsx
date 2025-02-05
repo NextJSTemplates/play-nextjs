@@ -15,6 +15,17 @@ const Hero = () => {
                 className="hero-content wow fadeInUp mx-auto max-w-[780px] text-center"
                 data-wow-delay=".2s"
               >
+              <div className="mt-16">
+                  <Image
+                    src="/images/logo.png"
+                    alt="hero"
+                    className="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
+                    width={100}
+                    height={100}
+                  />
+
+              </div>
+              
                 <h1 className="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
                 Tɛkyerɛma Pa Hackathon 2025
                 </h1>
