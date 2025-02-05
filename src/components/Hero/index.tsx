@@ -52,10 +52,9 @@ const Hero = () => {
                   </li>
 
 
-                  {/* <li>
+                  <li>
                     <Link
                       href="#"
-                      target="_blank"
                       className="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark"
                     >
                       <svg
@@ -77,21 +76,24 @@ const Hero = () => {
                       </svg>
                       Star on Github
                     </Link>
-                  </li> */}
+                  </li>
                 </ul>
 
                 <div>
                   <p className="mb-4 text-center text-base font-medium text-white/60">
-                    Play is now available for all popular frameworks
+                    Venue: University of Ghana, Legon
+                  </p>
+                  <p className="mb-4 text-center text-base font-medium text-white/60">
+                    Date: May 17th - 30th, 2025
                   </p>
                   <div
                     className="wow fadeInUp flex items-center justify-center gap-4 text-center"
                     data-wow-delay=".3s"
                   >
                     <Link
-                      href="https://github.com/uideck/play-bootstrap/"
+                      href="#"
                       className="text-white/60 duration-300 ease-in-out hover:text-white"
-                      target="_blank"
+                      // target="_blank"
                     >
                       <svg
                         className="fill-current"
@@ -123,9 +125,9 @@ const Hero = () => {
                     </Link>
 
                     <Link
-                      href="https://github.com/TailGrids/play-tailwind/"
+                      href="#"
                       className="text-white/60 duration-300 ease-in-out hover:text-white"
-                      target="_blank"
+                      // target="_blank"
                     >
                       <svg
                         className="fill-current"
@@ -153,9 +155,9 @@ const Hero = () => {
                     </Link>
 
                     <Link
-                      href="https://github.com/NextJSTemplates/play-nextjs"
+                      href="#"
                       className="text-white/60 duration-300 ease-in-out hover:text-white"
-                      target="_blank"
+                      // target="_blank"
                     >
                       <svg
                         className="fill-current"
@@ -171,9 +173,9 @@ const Hero = () => {
                     </Link>
 
                     <Link
-                      href="https://github.com/TailGrids/play-astro/"
+                      href="#"
                       className="text-white/60 duration-300 ease-in-out hover:text-white"
-                      target="_blank"
+                      // target="_blank"
                     >
                       <svg
                         className="mt-0.5 fill-current"
@@ -200,9 +202,9 @@ const Hero = () => {
                     </Link>
 
                     <Link
-                      href="https://github.com/NextJSTemplates/play-nextjs"
+                      href="#"
                       className="text-white/60 duration-300 ease-in-out hover:text-white"
-                      target="_blank"
+                      // target="_blank"
                     >
                       <svg
                         className="fill-current"

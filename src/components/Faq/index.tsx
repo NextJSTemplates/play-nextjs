@@ -8,7 +8,7 @@ const Faq = () => {
         <SectionTitle
           subtitle="FAQ"
           title="Any Questions? Answered"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph=" "
           width="640px"
           center
         />
@@ -16,32 +16,26 @@ const Faq = () => {
         <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="How to use TailGrids?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Who is speech impaired person?"
+              answer="A speech-impaired person is someone who experiences difficulty in producing spoken language or communicating verbally due to a condition or disorder affecting their speech. The conditions include stuttering/stammering, cleft palate, down syndrome, cerebral palsy, etc."
             />
             <SingleFaq
-              question="How to download icons from LineIcons?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Who can participate in the Hackathon?"
+              answer="University students with experience in programming language. Participants must register as a team (up to 3 to 5 members). We are looking for analytically sharp and logical thinkers who are ready to create accessible and inclusive technological solutions for speech-impaired individuals."
             />
-            <SingleFaq
-              question="Is GrayGrids part of UIdeck?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
+            
           </div>
 
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="Can I use this template for commercial project?"
+              question="What should I bring to the finale if shortlisted?"
               answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
             />
             <SingleFaq
-              question="Do you have plan to releasing Play Pro?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Whom shoudld we contact in case of queries?"
+              answer="You can contact at hcidcsug@gmail.com in case you have any queries."
             />
-            <SingleFaq
-              question="Where and how to host this template?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
+            
           </div>
         </div>
       </div>

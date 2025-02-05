@@ -1,6 +1,35 @@
+"use client"
+
 import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const CallToAction = () => {
+  const targetDate = new Date(2025, 4, 17, 0, 0, 0).getTime(); // Corrected local time
+  const [timeLeft, setTimeLeft] = useState(targetDate - new Date().getTime());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference <= 0) {
+        clearInterval(timer);
+        setTimeLeft(0);
+      } else {
+        setTimeLeft(difference);
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Convert milliseconds into days, hours, minutes, and seconds
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
   return (
     <section className="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
       <div className="container mx-auto">
@@ -9,22 +38,39 @@ const CallToAction = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[570px] text-center">
                 <h2 className="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
-                  <span>What Are You Looking For?</span>
-                  <span className="text-3xl font-normal md:text-[40px]">
-                    {" "}
-                    Get Started Now{" "}
-                  </span>
+                  <span>Register Now</span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  There are many variations of passages of Lorem Ipsum but the
-                  majority have suffered in some form.
+                  Don't miss out on this amazing opportunity to make a difference!
                 </p>
+                <div className="flex justify-center mt-1">
+                  <Image
+                    src="/images/scan.png"
+                    alt="logo"
+                    width={240}
+                    height={130}
+                    className="block dark:block mt-4"
+                  />
+
+                <div className="text-center mt-4 text-white text-lg font-bold">
+                          {timeLeft > 0 ? (
+                            `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`
+                          ) : (
+                            "Time's up!"
+                          )}
+                  </div>
+
+                </div>
+                <h2 className="flex flex-col item-center mt-4 mb-2.5 text-3xl font-bold text-white md:text-[20px] md:leading-[1.44] hover-text-blue-500">
+                  <span>Scan the QR Code to Register</span>
+                </h2>
                 <Link
-                  href="/"
+                  href="#"
                   className="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"
                 >
-                  Start using Play
+                  Register
                 </Link>
+                
               </div>
             </div>
           </div>

@@ -36,8 +36,8 @@ const PricingBox = ({ product }: { product: Price }) => {
           {product.nickname}
         </span>
         <h2 className="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
-          <span className="text-xl font-medium">$ </span>
-          <span className="-ml-1 -tracking-[2px]">
+          <span className="text-xl font-medium"></span>
+          {/* <span className="-ml-1 -tracking-[2px]">
             {(product.unit_amount / 100).toLocaleString("en-US", {
               currency: "USD",
             })}
@@ -45,13 +45,13 @@ const PricingBox = ({ product }: { product: Price }) => {
           <span className="text-base font-normal text-body-color dark:text-dark-6">
             {" "}
             Per Month
-          </span>
+          </span> */}
         </h2>
 
         <div className="mb-[50px]">
-          <h3 className="mb-5 text-lg font-medium text-dark dark:text-white">
+          {/* <h3 className="mb-5 text-lg font-medium text-dark dark:text-white">
             Features
-          </h3>
+          </h3> */}
           <div className="mb-10">
             {product?.offers.map((offer, i) => (
               <OfferList key={i} text={offer} />
@@ -59,12 +59,12 @@ const PricingBox = ({ product }: { product: Price }) => {
           </div>
         </div>
         <div className="w-full">
-          <button
+          {/* <button
             onClick={handleSubscription}
             className="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition duration-300 hover:bg-primary/90"
           >
             Purchase Now
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

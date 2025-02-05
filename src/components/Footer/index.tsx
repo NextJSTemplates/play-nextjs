@@ -261,7 +261,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-12 border-t border-[#8890A4] border-opacity-40 py-8 lg:mt-[60px]">
+      <div className="mt-12 items-center border-t border-[#8890A4] border-opacity-40 py-8 lg:mt-[60px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-2/3 lg:w-1/2">
@@ -288,9 +288,9 @@ const Footer = () => {
                 </div> */}
               </div>
             </div>
-            <div className="w-full px-4 md:w-1/3 lg:w-1/2  justify-center md:justify-end">
-              <div className="my-1 flex justify-center md:justify-end">
-                <p className="text-base text-gray-7 justify-center md:justify-end">
+            <div className="w-full px-4 md:w-1/3 lg:w-1/2 items-center justify-center md:justify-end">
+              <div className="my-1 flex justify-center items-center md:justify-end">
+                <p className="text-base items-center text-gray-7 justify-center md:justify-end">
                 © 2025 Human Computer Interactions & Persuasive Technologies Laboratory {"  "}
                   <Link
                     href="https://instagram.com/cyphahimself"
