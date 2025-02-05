@@ -79,7 +79,7 @@ For a wider range of options, feel free to browse our collection of [Next.js Tem
 **29 Jan 2025**
 - Upgraded to Next.js 15
 - Using `Link` instead of `a` tag
-
+- Fixed all minor bugs
 **21 March 2024**
 - Upgraded to Next.js 14
 - Updated stripe integration
