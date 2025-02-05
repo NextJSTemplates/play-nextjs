@@ -41,7 +41,7 @@ const CallToAction = () => {
                   <span>Register Now</span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  Don't miss out on this amazing opportunity to make a difference!
+                  Dont miss out on this amazing opportunity to make a difference!
                 </p>
                 <div className="flex justify-center mt-1">
                   <Image
@@ -52,13 +52,13 @@ const CallToAction = () => {
                     className="block dark:block mt-4"
                   />
 
-                <div className="text-center mt-4 text-white text-lg font-bold">
+                {/* <div className="text-center mt-4 text-white text-lg font-bold">
                           {timeLeft > 0 ? (
                             `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`
                           ) : (
                             "Time's up!"
                           )}
-                  </div>
+                  </div> */}
 
                 </div>
                 <h2 className="flex flex-col item-center mt-4 mb-2.5 text-3xl font-bold text-white md:text-[20px] md:leading-[1.44] hover-text-blue-500">

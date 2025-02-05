@@ -6,7 +6,7 @@ export const clientsData: Client[] = [
     title: "HCL Lab",
     logo: "images/brands/hcll.svg",
     logoWhite: "/images/brands/hcll.svg",
-    link: "https://lineicons.com/",
+    link: "#",
   },
   {
     id: 3,
