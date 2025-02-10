@@ -8,7 +8,7 @@ const Features = () => {
       <div className="container">
         <SectionTitle
           subtitle="Aims"
-          title="Main Aims"
+          title="Main Aim"
           paragraph="To design and develop an app that supports individuals with speech impairments to communicate effectively and inclusively in Ghanaian languages."
         />
 
