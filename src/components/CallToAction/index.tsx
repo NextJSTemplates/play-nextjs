@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { FaRegCalendarAlt, FaArrowRight } from "react-icons/fa";
+import { FaRegCalendarAlt, FaArrowRight, FaUsers, FaDollarSign, FaUserFriends, FaLaptopCode, FaLightbulb, FaTrophy } from "react-icons/fa";
 
 const Timeline = () => {
   const timelineData = [
@@ -67,7 +67,15 @@ const CallToAction = () => {
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   return (
-    <section className="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
+    <section className="relative z-10 overflow-hidden pt-[120px] md:pt-[130px] lg:pt-[160px] bg-gradient-to-l from-pink-500 via-purple-500 to-blue-500">
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <FaUsers className="absolute text-white opacity-20 animate-bounce w-16 h-16" style={{ top: '10%', left: '10%' }} />
+        <FaDollarSign className="absolute text-white opacity-20 animate-bounce w-12 h-12" style={{ top: '20%', left: '30%', animationDelay: '0.2s' }} />
+        <FaUserFriends className="absolute text-white opacity-20 animate-bounce w-20 h-20" style={{ top: '30%', left: '50%', animationDelay: '0.4s' }} />
+        <FaLaptopCode className="absolute text-white opacity-20 animate-bounce w-14 h-14" style={{ top: '40%', left: '70%', animationDelay: '0.6s' }} />
+        <FaLightbulb className="absolute text-white opacity-20 animate-bounce w-18 h-18" style={{ top: '50%', left: '90%', animationDelay: '0.8s' }} />
+        <FaTrophy className="absolute text-white opacity-20 animate-bounce w-16 h-16" style={{ top: '60%', left: '20%', animationDelay: '1s' }} />
+      </div>
       <div className="container mx-auto">
         <div className="relative overflow-hidden">
           <div className="-mx-4 flex flex-wrap items-stretch">
