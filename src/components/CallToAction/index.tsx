@@ -45,7 +45,7 @@ const CallToAction = () => {
                 </p>
                 <div className="flex justify-center mt-1">
                   <Image
-                    src="/images/scan.png"
+                    src="/images/qr-code.png"
                     alt="logo"
                     width={240}
                     height={130}

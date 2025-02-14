@@ -95,7 +95,7 @@ const Hero = () => {
                     Venue: University of Ghana, Legon
                   </p>
                   <p className="mb-4 text-center text-base font-medium text-white/60">
-                    Date: May 17th - 30th, 2025
+                    Date: May 26th - 30th, 2025
                   </p>
                   <div
                     className="wow fadeInUp flex items-center justify-center gap-4 text-center"
@@ -233,7 +233,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="w-full px-4">
+            {/* <div className="w-full px-4">
               <div
                 className="wow fadeInUp relative z-10 mx-auto max-w-[845px]"
                 data-wow-delay=".25s"
@@ -1389,7 +1389,8 @@ const Hero = () => {
                   </svg>
                 </div>
               </div>
-            </div>
+            </div> */}
+            
           </div>
         </div>
       </section>
