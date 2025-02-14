@@ -35,6 +35,10 @@ const Faq = () => {
               question="Whom shoudld we contact in case of queries?"
               answer="You can contact at hcidcsug@gmail.com in case you have any queries."
             />
+            <SingleFaq
+              question="Who can participate?"
+              answer="We highly encourage diverse teams to apply. Each team can have up to five members, including at least one female and, preferably, one individual with speech impairment. "
+            />
             
           </div>
         </div>
