@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { FaRegClock } from "react-icons/fa";
+import { FaRegCalendarAlt, FaArrowRight } from "react-icons/fa";
 
 const Timeline = () => {
   const timelineData = [
@@ -22,12 +22,17 @@ const Timeline = () => {
       <h2 className="text-3xl font-bold text-center text-white mb-8">Timelines</h2>
       <div className="timeline flex flex-wrap justify-center items-center space-x-8">
         {timelineData.map((item, index) => (
-          <div key={index} className="timeline-item flex flex-col items-center mb-8">
+          <div key={index} className="timeline-item flex flex-col items-center mb-8 relative">
             <div className="timeline-icon text-4xl text-secondary mb-2">
-              <FaRegClock />
+              <FaRegCalendarAlt />
             </div>
             <div className="timeline-date text-lg font-semibold text-white">{item.date}</div>
             <div className="timeline-event text-base text-white">{item.event}</div>
+            {index < timelineData.length - 1 && (
+              <div className="timeline-connector absolute top-1/2 transform -translate-y-1/2 left-full h-1 w-8 flex items-center justify-center">
+                <FaArrowRight className="text-secondary" />
+              </div>
+            )}
           </div>
         ))}
       </div>

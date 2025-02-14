@@ -33,7 +33,7 @@ export const clientsData: Client[] = [
     id: 5,
     title: "UK Aid",
     logo: "/images/brands/UK-aid.svg",
-    logoWhite: "/images/brands/uk-aid.svg",
+    logoWhite: "/images/brands/UK-aid.svg",
     link: "#",
   },
   {

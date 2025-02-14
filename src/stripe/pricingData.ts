@@ -1,43 +1,26 @@
 import { Price } from "@/types/price";
+import { FaAward, FaChalkboardTeacher, FaUniversity } from "react-icons/fa";
 
 export const pricingData: Price[] = [
   {
     id: "price_1NQk5TLtGdPVhGLecVfQ7mn0",
     unit_amount: 100 * 100,
-    nickname: "Up to £5,000 in awards plus $5000 cash prize",
-    offers: [
-      // "1 User",
-      // "All UI components",
-      // "Lifetime access",
-      // "Free updates",
-      // "Use on 1 (one) project",
-      // "3 Months support",
-    ],
+    nickname: "Up to $5,000 in cash awards (1st place: $2,500, 2nd place: $1,500, 3rd place: $1,000)",
+    icon: FaAward,
+    offers: [],
   },
   {
     id: "price_1NQk55LtGdPVhGLefU8AHqHr",
     unit_amount: 200 * 100,
-    nickname: "Mentorship opportunities with experts from Google and GDI Hub, University College of London.",
-    offers: [
-      // "5 Users",
-      // "All UI components",
-      // "Lifetime access",
-      // "Free updates",
-      // "Use on 1 (one) project",
-      // "3 Months support",
-    ],
+    nickname: "Mentorship opportunities with experts from Google and Global Disability Innovation Hub (GDI Hub), University College of London",
+    icon: FaChalkboardTeacher,
+    offers: [],
   },
   {
     id: "price_1NQk4eLtGdPVhGLeZsZDsCNz",
     unit_amount: 300 * 100,
-    nickname: "A potential scholarship for an MSc in Computer Science.",
-    offers: [
-      // "10 Users",
-      // "All UI components",
-      // "Lifetime access",
-      // "Free updates",
-      // "Use on 1 (one) project",
-      // "3 Months support",
-    ],
+    nickname: "Potential MSc Scholarship Opportunities at the Human-Computer Interaction lab, Department of Computer Science, University of Ghana",
+    icon: FaUniversity,
+    offers: [],
   },
 ];
