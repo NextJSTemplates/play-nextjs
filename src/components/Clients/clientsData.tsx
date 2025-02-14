@@ -11,15 +11,15 @@ export const clientsData: Client[] = [
   {
     id: 2,
     title: "AT Lab",
-    logo: "/images/brands/at.svg",
-    logoWhite: "/images/brands/at.svg",
+    logo: "/images/brands/AT.svg",
+    logoWhite: "/images/brands/AT.svg",
     link: "#",
   },
   {
     id: 3,
     title: "CDLI Lab",
-    logo: "/images/brands/cdli.svg",
-    logoWhite: "/images/brands/cdli.svg",
+    logo: "/images/brands/CDLI.svg",
+    logoWhite: "/images/brands/CDLI.svg",
     link: "#",
   },
   {
@@ -32,7 +32,7 @@ export const clientsData: Client[] = [
   {
     id: 5,
     title: "UK Aid",
-    logo: "/images/brands/uk-aid.svg",
+    logo: "/images/brands/UK-aid.svg",
     logoWhite: "/images/brands/uk-aid.svg",
     link: "#",
   },
