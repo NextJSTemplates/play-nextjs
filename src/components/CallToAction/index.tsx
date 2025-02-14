@@ -3,6 +3,37 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { FaRegClock } from "react-icons/fa";
+
+const Timeline = () => {
+  const timelineData = [
+    { date: "March 30, 2025", event: "Deadline for registration" },
+    { date: "April 5, 2025", event: "Notify selected participants" },
+    { date: "April 7–15, 2025", event: "Awareness campaign and team outreach" },
+    { date: "April 21–30, 2025", event: "Online Bootcamp and dataset introduction" },
+    { date: "May 1–19, 2025", event: "Ideation Sprint with mentor reviews" },
+    { date: "May 19–23, 2025", event: "In-person mentoring sessions" },
+    { date: "May 26–30, 2025", event: "Hackathon event" },
+    { date: "June 1 onwards, 2025", event: "Post-event feedback and follow-up" },
+  ];
+
+  return (
+    <div className="timeline-container mt-10">
+      <h2 className="text-3xl font-bold text-center text-white mb-8">Timelines</h2>
+      <div className="timeline flex flex-wrap justify-center items-center space-x-8">
+        {timelineData.map((item, index) => (
+          <div key={index} className="timeline-item flex flex-col items-center mb-8">
+            <div className="timeline-icon text-4xl text-secondary mb-2">
+              <FaRegClock />
+            </div>
+            <div className="timeline-date text-lg font-semibold text-white">{item.date}</div>
+            <div className="timeline-event text-base text-white">{item.event}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const CallToAction = () => {
   const targetDate = new Date(2025, 2, 30, 0, 0, 0).getTime(); // March 30, 2025
@@ -85,7 +116,8 @@ const CallToAction = () => {
                   <span>Scan the QR Code to Register</span>
                 </h2>
                 <Link
-                  href="#"
+                  href="https://link.webropolsurveys.com/Participation/Public/957e29ad-d7c9-454e-8d72-4daf1b79c82f?displayId=Fin3306847"
+                  target="_blank"
                   className="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"
                 >
                   Register
@@ -94,6 +126,7 @@ const CallToAction = () => {
             </div>
           </div>
         </div>
+        <Timeline />
       </div>
       <div>
         <span className="absolute left-0 top-0">
