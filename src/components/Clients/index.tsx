@@ -7,11 +7,11 @@ const Clients = () => {
     <section className="pb-20 dark:bg-dark">
       <div className="container px-4">
         <div className="-mx-4 flex flex-wrap items-center justify-center gap-8 xl:gap-11">
-          <Link
+          {/* <Link
             href="#" className="inline-block rounded-md border border-transparent bg-blue px-7 py-3 text-base font-medium text-white"
             >
-            Sponsors
-          </Link>
+            
+          </Link> */}
           {clientsData.map((client, i) => (
             <SingleClient key={i} client={client} />
           ))}

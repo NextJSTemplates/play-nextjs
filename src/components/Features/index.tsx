@@ -18,19 +18,19 @@ const Features = () => {
         title="About the Hackathon"
         paragraph="The Centre for Digital Language Inclusion is delighted to introduce its first hackathon to bridge the communication gap for individuals with speech disabilities through the development of technological solution that leverages automatic speech recognition or Text-to-Speech (TTS)"
         />
-        <br /><br />
+        <br />
         <SectionTitle
         subtitle=""
         title=""
         paragraph="The Tɛkyerɛma Pa (good tongue) Hackathon 2025 invites all university students and technology advocates to participate in creating innovative solutions that will make a significant impact on individuals with speech impairments in Ghana and beyond."
         />
-        <br /><br />
+        <br />
         <SectionTitle
         subtitle=""
         title=""
         paragraph="At this hackathon, participants will be given the unique opportunity to help bridge the communication gap for individuals with speech disabilities through the development of technological solution that leverage automatic speech recognition or Text-to-Speech (TTS) tailored for Ghanaian languages. By focusing on these areas, the hackathon aims to create accessible tools that empower individuals to communicate more effectively in their native language, breaking down barriers to inclusion."
         />
-        <br /><br />
+        <br />
         <Link
                   href="/about"
                   className="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"

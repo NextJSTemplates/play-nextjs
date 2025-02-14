@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const CallToAction = () => {
-  const targetDate = new Date(2025, 4, 17, 0, 0, 0).getTime(); // Corrected local time
+  const targetDate = new Date(2025, 2, 30, 0, 0, 0).getTime(); // March 30, 2025
   const [timeLeft, setTimeLeft] = useState(targetDate - new Date().getTime());
 
   useEffect(() => {
@@ -37,6 +37,7 @@ const CallToAction = () => {
           <div className="-mx-4 flex flex-wrap items-stretch">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[570px] text-center">
+                
                 <h2 className="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
                   <span>Register Now</span>
                 </h2>
@@ -51,17 +52,36 @@ const CallToAction = () => {
                     height={130}
                     className="block dark:block mt-4"
                   />
-
-                {/* <div className="text-center mt-4 text-white text-lg font-bold">
-                          {timeLeft > 0 ? (
-                            `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`
-                          ) : (
-                            "Time's up!"
-                          )}
-                  </div> */}
-
+                  
+                </div>
+                <div className="text-center mt-4 text-white text-lg font-bold">
+                  {timeLeft > 0 ? (
+                    <div className="flex justify-center space-x-4">
+                      <div className="flex flex-col items-center">
+                        <span className="text-4xl font-bold">{days}</span>
+                        <span className="text-sm">Days</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <span className="text-4xl font-bold">{hours}</span>
+                        <span className="text-sm">Hours</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <span className="text-4xl font-bold">{minutes}</span>
+                        <span className="text-sm">Minutes</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <span className="text-4xl font-bold">{seconds}</span>
+                        <span className="text-sm">Seconds</span>
+                      </div>
+                    </div>
+                  ) : (
+                    "Time's up!"
+                  )}
                 </div>
                 <h2 className="flex flex-col item-center mt-4 mb-2.5 text-3xl font-bold text-white md:text-[20px] md:leading-[1.44] hover-text-blue-500">
+                  <span>Deadline for Registration is March 30, 2025</span>
+                </h2>
+                <h2 className="flex flex-col item-center mt-4 mb-2.5 text-3xl font-medium text-white md:text-[20px] md:leading-[1.44] hover-text-blue-500">
                   <span>Scan the QR Code to Register</span>
                 </h2>
                 <Link
@@ -70,7 +90,6 @@ const CallToAction = () => {
                 >
                   Register
                 </Link>
-                
               </div>
             </div>
           </div>

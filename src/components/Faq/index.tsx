@@ -16,7 +16,7 @@ const Faq = () => {
         <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="Who is speech impaired person?"
+              question="Who is a speech impaired person?"
               answer="A speech-impaired person is someone who experiences difficulty in producing spoken language or communicating verbally due to a condition or disorder affecting their speech. The conditions include stuttering/stammering, cleft palate, down syndrome, cerebral palsy, etc."
             />
             <SingleFaq
