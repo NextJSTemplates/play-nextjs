@@ -1,6 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaUniversity, FaGoogle, FaHandsHelping, FaLanguage, FaMicrophone, FaUsers, FaLightbulb, FaLaptopCode } from "react-icons/fa";
+import { FaUniversity, FaGoogle, FaHandsHelping, FaLanguage, FaMicrophone, FaUsers, FaLightbulb, FaLaptopCode, FaRegCalendarAlt, FaArrowRight } from "react-icons/fa";
+
+const Timeline = () => {
+  const timelineData = [
+    { date: "March 30, 2025", event: "Deadline for registration" },
+    { date: "April 5, 2025", event: "Notify selected participants" },
+    { date: "April 7–15, 2025", event: "Awareness campaign and team outreach" },
+    { date: "April 21–30, 2025", event: "Online Bootcamp and dataset introduction" },
+    { date: "May 1–19, 2025", event: "Ideation Sprint with mentor reviews" },
+    { date: "May 19–23, 2025", event: "In-person mentoring sessions" },
+    { date: "May 26–30, 2025", event: "Hackathon event" },
+    { date: "June 1 onwards, 2025", event: "Post-event feedback and follow-up" },
+  ];
+
+  return (
+    <div className="timeline-container mt-10 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-8 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold text-center text-white mb-8">Timelines</h2>
+      <div className="timeline flex flex-wrap justify-center items-center space-x-8">
+        {timelineData.map((item, index) => (
+          <div key={index} className="timeline-item flex flex-col items-center mb-8 relative">
+            <div className="timeline-icon text-4xl text-secondary mb-2">
+              <FaRegCalendarAlt />
+            </div>
+            <div className="timeline-date text-lg font-semibold text-white">{item.date}</div>
+            <div className="timeline-event text-base text-white">{item.event}</div>
+            {index < timelineData.length - 1 && (
+              <div className="timeline-connector absolute top-1/2 transform -translate-y-1/2 left-full h-1 w-8 flex items-center justify-center">
+                <FaArrowRight className="text-secondary" />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const About = () => {
   return (
@@ -189,6 +224,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        <Timeline />
       </div>
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
         <FaUniversity className="absolute text-white opacity-20 animate-bounce w-16 h-16" style={{ top: '10%', left: '10%' }} />
