@@ -12,8 +12,8 @@ const Pricing = () => {
       <div className="container">
         <div className="mb-[60px] text-center text-white">
           <h2 className="text-3xl font-bold">You stand a chance to benefit from any of the following</h2>
-          <h3 className="text-2xl font-semibold mt-4">Our Pricing Plans</h3>
-          <p className="text-lg mt-2">Choose a plan that fits your needs and start your journey with us.</p>
+          {/* <h3 className="text-2xl font-semibold mt-4">Our Pricing Plans</h3>
+          <p className="text-lg mt-2">Choose a plan that fits your needs and start your journey with us.</p> */}
         </div>
 
         <div className="-mx-4 flex flex-wrap justify-center">
