@@ -14,8 +14,8 @@ const Features = () => {
         />
         <br /><br />
         <SectionTitle
-        subtitle="About"
-        title="About the Hackathon"
+        subtitle="About the Hackathon"
+        title=""
         paragraph="The Centre for Digital Language Inclusion is delighted to introduce its first hackathon to bridge the communication gap for individuals with speech disabilities through the development of technological solution that leverages automatic speech recognition or Text-to-Speech (TTS)"
         />
         <br />

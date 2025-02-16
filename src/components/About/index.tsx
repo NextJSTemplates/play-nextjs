@@ -13,14 +13,19 @@ const About = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                To design and develop an app that supports individuals with speech impairments to communicate effectively and inclusively in Ghanaian languages.
+                The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London and University of Ghana, funded by UK aid’s AT2030 programme, alongside support from Google.org
                 </h2>
+                <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
+                The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London (UCL) and the University of Ghana (UG), funded by UK aid AT2030 programme, alongside support from google.org.
+                  </p>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
                 The Tɛkyerɛma Pa Hackathon 2025 invites all university students and technology advocates to participate in creating innovative solutions that will make a significant impact on individuals with speech impairments in Ghana and beyond.
                   <br /> <br />
                   At this hackathon, participants will be given the unique opportunity to help bridge the communication gap for individuals with speech disabilities through the development of cutting-edge technologies such as Text-to-Speech (TTS) and automatic speech recognition (ASR) tailored for Ghanaian languages. By focusing on these areas, the hackathon aims to create accessible tools that empower individuals to communicate more effectively in their native language, breaking down barriers to inclusion.
                 </p>
-
+                <br />
+                <p>A curated dataset of selected Ghanaian languages namely Akan, Ewe, Ga, Dagbani, and Dagaare is available to participants to support their project.</p>
+                <br />
                 <Link
                   href="#"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"

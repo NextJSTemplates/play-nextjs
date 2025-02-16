@@ -20,23 +20,23 @@ const Faq = () => {
               answer="A speech-impaired person is someone who experiences difficulty in producing spoken language or communicating verbally due to a condition or disorder affecting their speech. The conditions include stuttering/stammering, cleft palate, down syndrome, cerebral palsy, etc."
             />
             <SingleFaq
-              question="Who can participate in the Hackathon?"
-              answer="University students with experience in programming language. Participants must register as a team (up to 3 to 5 members). We are looking for analytically sharp and logical thinkers who are ready to create accessible and inclusive technological solutions for speech-impaired individuals."
+              question="Why take part in the hackathon?"
+              answer="This hackathon presents a unique opportunity to develop real-world solutions to real-world problems, making a meaningful impact on the lives of millions of individuals with speech impairments."
             />
             
           </div>
 
           <div className="w-full px-4 lg:w-1/2">
-            <SingleFaq
+            {/* <SingleFaq
               question="What should I bring to the finale if shortlisted?"
               answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+            /> */}
+            <SingleFaq
+              question="Whom should we contact in case of queries?"
+              answer="You can contact hcidcs@gmail.com or visit the HCI lab, Department of Computer Science, University of Ghana, Legon."
             />
             <SingleFaq
-              question="Whom shoudld we contact in case of queries?"
-              answer="You can contact at hcidcsug@gmail.com in case you have any queries."
-            />
-            <SingleFaq
-              question="Who can participate?"
+              question="Who can participate in the Hackathon?"
               answer="We highly encourage diverse teams to apply. Each team can have up to five members, including at least one female and, preferably, one individual with speech impairment. "
             />
             

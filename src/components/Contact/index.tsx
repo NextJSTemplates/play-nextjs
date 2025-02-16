@@ -53,7 +53,7 @@ const Contact = () => {
                       How Can We Help?
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                    hcidcsug@gmail.com
+                    speechdata@ug.edu.gh
                     </p>
                     {/* <p className="mt-1 text-base text-body-color dark:text-dark-6">
                       contact@yourdomain.com
