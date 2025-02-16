@@ -33,7 +33,7 @@ const Contact = () => {
                       Our Location
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      University of Ghana, Legon
+                    HCI Lab, Department of Computer Science, University of Ghana, Legon
                     </p>
                   </div>
                 </div>

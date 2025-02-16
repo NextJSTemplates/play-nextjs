@@ -16,14 +16,14 @@ const About = () => {
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
                   The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London and University of Ghana, funded by UK aid’s AT2030 programme, alongside support from Google.org
                 </h2>
-                <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
+                {/* <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
                   The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London (UCL) and the University of Ghana (UG), funded by UK aid AT2030 programme, alongside support from google.org.
                 </p>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
                   The Tɛkyerɛma Pa Hackathon 2025 invites all university students and technology advocates to participate in creating innovative solutions that will make a significant impact on individuals with speech impairments in Ghana and beyond.
                   <br /> <br />
                   At this hackathon, participants will be given the unique opportunity to help bridge the communication gap for individuals with speech disabilities through the development of cutting-edge technologies such as Text-to-Speech (TTS) and automatic speech recognition (ASR) tailored for Ghanaian languages. By focusing on these areas, the hackathon aims to create accessible tools that empower individuals to communicate more effectively in their native language, breaking down barriers to inclusion.
-                </p>
+                </p> */}
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
                   A curated dataset of selected Ghanaian languages namely Akan, Ewe, Ga, Dagbani, and Dagaare is available to participants to support their project.
                 </p>

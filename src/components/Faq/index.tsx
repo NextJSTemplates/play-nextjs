@@ -33,7 +33,7 @@ const Faq = () => {
             /> */}
             <SingleFaq
               question="Whom should we contact in case of queries?"
-              answer="You can contact hcidcs@gmail.com or visit the HCI lab, Department of Computer Science, University of Ghana, Legon."
+              answer="You can contact speechdata@ug.edu.gh or visit the HCI lab, Department of Computer Science, University of Ghana, Legon."
             />
             <SingleFaq
               question="Who can participate in the Hackathon?"
