@@ -15,8 +15,8 @@ const Footer = () => {
                     <Image
                       src={client.logoWhite}
                       alt={client.title}
-                      width={100}
-                      height={50}
+                      width={150} // Increased width
+                      height={75} // Increased height
                       className="block"
                     />
                   </div>

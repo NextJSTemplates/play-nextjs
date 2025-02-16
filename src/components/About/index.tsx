@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaUniversity, FaGoogle, FaHandsHelping, FaLanguage, FaMicrophone, FaUsers, FaLightbulb, FaLaptopCode } from "react-icons/fa";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]"
+      className="relative bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]"
     >
       <div className="container">
         <div className="wow fadeInUp" data-wow-delay=".2s">
@@ -13,19 +14,19 @@ const About = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London and University of Ghana, funded by UK aid’s AT2030 programme, alongside support from Google.org
+                  The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London and University of Ghana, funded by UK aid’s AT2030 programme, alongside support from Google.org
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London (UCL) and the University of Ghana (UG), funded by UK aid AT2030 programme, alongside support from google.org.
-                  </p>
+                  The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London (UCL) and the University of Ghana (UG), funded by UK aid AT2030 programme, alongside support from google.org.
+                </p>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                The Tɛkyerɛma Pa Hackathon 2025 invites all university students and technology advocates to participate in creating innovative solutions that will make a significant impact on individuals with speech impairments in Ghana and beyond.
+                  The Tɛkyerɛma Pa Hackathon 2025 invites all university students and technology advocates to participate in creating innovative solutions that will make a significant impact on individuals with speech impairments in Ghana and beyond.
                   <br /> <br />
                   At this hackathon, participants will be given the unique opportunity to help bridge the communication gap for individuals with speech disabilities through the development of cutting-edge technologies such as Text-to-Speech (TTS) and automatic speech recognition (ASR) tailored for Ghanaian languages. By focusing on these areas, the hackathon aims to create accessible tools that empower individuals to communicate more effectively in their native language, breaking down barriers to inclusion.
                 </p>
-                <br />
-                <p>A curated dataset of selected Ghanaian languages namely Akan, Ewe, Ga, Dagbani, and Dagaare is available to participants to support their project.</p>
-                <br />
+                <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
+                  A curated dataset of selected Ghanaian languages namely Akan, Ewe, Ga, Dagbani, and Dagaare is available to participants to support their project.
+                </p>
                 <Link
                   href="#"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
@@ -45,7 +46,7 @@ const About = () => {
                       src="/images/about/about-image-01.jpg"
                       alt="about image"
                       fill
-                      className="h-full w-full object-cover object-center"
+                      className="h-full w-full object-cover object-center rounded-lg shadow-lg"
                     />
                   </div>
                 </div>
@@ -56,20 +57,20 @@ const About = () => {
                       src="/images/about/about-image-02.jpg"
                       alt="about image"
                       fill
-                      className="h-full w-full object-cover object-center"
+                      className="h-full w-full object-cover object-center rounded-lg shadow-lg"
                     />
                   </div>
 
-                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
+                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8 rounded-lg shadow-lg">
                     <div>
                       <span className="block text-5xl font-extrabold text-white">
-                        09
+                        Gallery
                       </span>
                       <span className="block text-base font-semibold text-white">
-                        We have
+                        Coming Soon!
                       </span>
                       <span className="block text-base font-medium text-white text-opacity-70">
-                        Years of experience
+                        Tɛkyerɛma Pa
                       </span>
                     </div>
                     <div>
@@ -188,6 +189,16 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <FaUniversity className="absolute text-white opacity-20 animate-bounce w-16 h-16" style={{ top: '10%', left: '10%' }} />
+        <FaGoogle className="absolute text-white opacity-20 animate-bounce w-12 h-12" style={{ top: '20%', left: '30%', animationDelay: '0.2s' }} />
+        <FaHandsHelping className="absolute text-white opacity-20 animate-bounce w-20 h-20" style={{ top: '30%', left: '50%', animationDelay: '0.4s' }} />
+        <FaLanguage className="absolute text-white opacity-20 animate-bounce w-14 h-14" style={{ top: '40%', left: '70%', animationDelay: '0.6s' }} />
+        <FaMicrophone className="absolute text-white opacity-20 animate-bounce w-18 h-18" style={{ top: '50%', left: '90%', animationDelay: '0.8s' }} />
+        <FaUsers className="absolute text-white opacity-20 animate-bounce w-16 h-16" style={{ top: '60%', left: '20%', animationDelay: '1s' }} />
+        <FaLightbulb className="absolute text-white opacity-20 animate-bounce w-16 h-16" style={{ top: '70%', left: '40%', animationDelay: '1.2s' }} />
+        <FaLaptopCode className="absolute text-white opacity-20 animate-bounce w-16 h-16" style={{ top: '80%', left: '60%', animationDelay: '1.4s' }} />
       </div>
     </section>
   );
