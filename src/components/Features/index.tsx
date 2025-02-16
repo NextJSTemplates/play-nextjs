@@ -7,12 +7,12 @@ const Features = () => {
   return (
     <section className="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
       <div className="container">
-        <SectionTitle
+        {/* <SectionTitle
           subtitle="Aim"
           title="Main Aim"
           paragraph="To design and develop an app that supports individuals with speech impairments to communicate effectively and inclusively in Ghanaian languages."
         />
-        <br /><br />
+        <br /><br /> */}
         <SectionTitle
         subtitle="About the Hackathon"
         title=""
