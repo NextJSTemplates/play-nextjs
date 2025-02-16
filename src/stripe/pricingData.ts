@@ -16,7 +16,7 @@ export const pricingData: Price[] = [
   {
     id: "price_1NQk55LtGdPVhGLefU8AHqHr",
     unit_amount: 200 * 100,
-    nickname: "Mentorship opportunities with experts from Google and Global Disability Innovation Hub (GDI Hub), University College of London",
+    nickname: "Mentorship opportunities with experts from Google and Global Disability Innovation Hub (GDI Hub), University College of London.",
     icon: FaChalkboardTeacher,
     offers: [
     ],
@@ -24,7 +24,7 @@ export const pricingData: Price[] = [
   {
     id: "price_1NQk4eLtGdPVhGLeZsZDsCNz",
     unit_amount: 300 * 100,
-    nickname: "Potential MSc Scholarship Opportunities at the Human-Computer Interaction lab, Department of Computer Science, University of Ghana",
+    nickname: "Potential MSc Scholarship Opportunities at the Human-Computer Interaction lab, Department of Computer Science, University of Ghana.",
     icon: FaUniversity,
     offers: [
     ],
