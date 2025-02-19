@@ -37,38 +37,6 @@ const Hero = () => {
                   The Tɛkyerɛma Pa Hackathon 2025 invites all university students and technology advocates to participate in creating innovative solutions that will make a significant impact on individuals with speech impairments in Ghana and beyond.
                 </p>
 
-                <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
-                  <li>
-                    <Link
-                      href="#"
-                      className="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-green-200"
-                    >
-                      <FaUsers className="mr-2" />
-                      In Person
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      className="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-green-200"
-                    >
-                      <FaDollarSign className="mr-2" />
-                      Free
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="#"
-                      className="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-green-200"
-                    >
-                      <FaUserFriends className="mr-2" />
-                      Team Sizes: 1-5 Members
-                    </Link>
-                  </li>
-                </ul>
-
                 <div className="flex justify-center space-x-8">
                   <p className="mb-4 text-center text-base font-medium text-white/60 flex items-center">
                     <FaMapMarkerAlt className="mr-2" />
