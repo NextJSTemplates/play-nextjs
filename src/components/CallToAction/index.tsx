@@ -13,7 +13,6 @@ const CallToAction = () => {
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const difference = targetDate - now;
-
       if (difference <= 0) {
         clearInterval(timer);
         setTimeLeft(0);
