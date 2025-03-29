@@ -4,13 +4,11 @@ import { FaUniversity, FaGoogle, FaHandsHelping, FaLanguage, FaMicrophone, FaUse
 
 const Timeline = () => {
   const timelineData = [
-    { date: "March 30, 2025", event: "Deadline for registration" },
-    { date: "April 5, 2025", event: "Notify selected participants" },
     { date: "April 7–15, 2025", event: "Awareness campaign and team outreach" },
     { date: "April 21–30, 2025", event: "Online Bootcamp and dataset introduction" },
-    { date: "May 1–19, 2025", event: "Ideation Sprint with mentor reviews" },
-    { date: "May 19–23, 2025", event: "In-person mentoring sessions" },
-    { date: "May 26–30, 2025", event: "Hackathon event" },
+    { date: "May 1–23, 2025", event: "Ideation Sprint with mentor reviews" },
+    { date: "May 26–29, 2025", event: "In-person mentoring sessions" },
+    { date: "May 30, 2025", event: "Hackathon event" },
     { date: "June 1 onwards, 2025", event: "Post-event feedback and follow-up" },
   ];
 
@@ -51,14 +49,6 @@ const About = () => {
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
                   The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London and University of Ghana, funded by UK aid’s AT2030 programme, alongside support from Google.org
                 </h2>
-                {/* <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London (UCL) and the University of Ghana (UG), funded by UK aid AT2030 programme, alongside support from google.org.
-                </p>
-                <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  The Tɛkyerɛma Pa Hackathon 2025 invites all university students and technology advocates to participate in creating innovative solutions that will make a significant impact on individuals with speech impairments in Ghana and beyond.
-                  <br /> <br />
-                  At this hackathon, participants will be given the unique opportunity to help bridge the communication gap for individuals with speech disabilities through the development of cutting-edge technologies such as Text-to-Speech (TTS) and automatic speech recognition (ASR) tailored for Ghanaian languages. By focusing on these areas, the hackathon aims to create accessible tools that empower individuals to communicate more effectively in their native language, breaking down barriers to inclusion.
-                </p> */}
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
                   A curated dataset of selected Ghanaian languages namely Akan, Ewe, Ga, Dagbani, and Dagaare is available to participants to support their project.
                 </p>

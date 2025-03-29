@@ -87,7 +87,7 @@ const CallToAction = () => {
                   )}
                 </div>
                 <h2 className="flex flex-col item-center mt-4 mb-2.5 text-3xl font-bold text-white md:text-[20px] md:leading-[1.44] hover-text-blue-500">
-                  <span>Deadline for Registration is March 30, 2025</span>
+                  <span>Deadline for Registration is April 10, 2025</span>
                 </h2>
                 <h2 className="flex flex-col item-center mt-4 mb-2.5 text-3xl font-medium text-white md:text-[20px] md:leading-[1.44] hover-text-blue-500">
                   <span>Scan the QR Code to Register</span>

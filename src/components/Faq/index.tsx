@@ -23,23 +23,25 @@ const Faq = () => {
               question="Why take part in the hackathon?"
               answer="This hackathon presents a unique opportunity to develop real-world solutions to real-world problems, making a meaningful impact on the lives of millions of individuals with speech impairments."
             />
-            
+            <SingleFaq
+              question="Who can participate in the Hackathon?"
+              answer="We highly encourage diverse teams to apply. Each team can have up to five members, including at least one female and, preferably, one individual with speech impairment. If your team does not have a member with a speech impairment, it can have up to four members, and we will assign an individual with a speech impairment to your team."
+            />
           </div>
 
           <div className="w-full px-4 lg:w-1/2">
-            {/* <SingleFaq
-              question="What should I bring to the finale if shortlisted?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            /> */}
             <SingleFaq
               question="Whom should we contact in case of queries?"
               answer="You can contact speechdata@ug.edu.gh or visit the HCI lab, Department of Computer Science, University of Ghana, Legon."
             />
             <SingleFaq
-              question="Who can participate in the Hackathon?"
-              answer="We highly encourage diverse teams to apply. Each team can have up to five members, including at least one female and, preferably, one individual with speech impairment. "
+              question="What if my team doesn’t include a member with a speech impairment?"
+              answer="If your team doesn’t have a member with a speech impairment, it can have up to four members. In that case, we will assign an individual with a speech impairment to your team."
             />
-            
+            <SingleFaq
+              question="When are we expected to arrive at the University of Ghana in Accra?"
+              answer="If your team is among the top five finalists, you will be expected to be at the University of Ghana from May 25th to May 31st, 2025. All activities before May 25th will be conducted virtually."
+            />
           </div>
         </div>
       </div>
