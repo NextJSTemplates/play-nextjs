@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { FaUsers, FaDollarSign, FaUserFriends, FaLaptopCode, FaLightbulb, FaTrophy } from "react-icons/fa";
 
 const CallToAction = () => {
-  const targetDate = new Date(2025, 2, 30, 0, 0, 0).getTime(); // March 30, 2025
+  const targetDate = new Date(2025, 3, 30, 0, 0, 0).getTime(); // March 30, 2025
   const [timeLeft, setTimeLeft] = useState(targetDate - new Date().getTime());
 
   useEffect(() => {
