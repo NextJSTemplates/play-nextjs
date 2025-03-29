@@ -50,4 +50,11 @@ export const clientsData: Client[] = [
     logoWhite: "/images/brands/gdih.svg",
     link: "#",
   },
+  {
+    id: 8,
+    title: "PE",
+    logo: "/images/brands/PE.svg",
+    logoWhite: "/images/brands/PE.svg",
+    link: "#",
+  },
 ];

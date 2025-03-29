@@ -42,6 +42,10 @@ const Faq = () => {
               question="When are we expected to arrive at the University of Ghana in Accra?"
               answer="If your team is among the top five finalists, you will be expected to be at the University of Ghana from May 25th to May 31st, 2025. All activities before May 25th will be conducted virtually."
             />
+            <SingleFaq
+              question="How will I know if my team has been selected?"
+              answer="Selection will be conducted in stages. The first batch of successful applicants (teams) will be notified by April 5th and the second batch by April 12th, 2025."
+            />
           </div>
         </div>
       </div>

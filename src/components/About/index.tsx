@@ -1,33 +1,56 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaUniversity, FaGoogle, FaHandsHelping, FaLanguage, FaMicrophone, FaUsers, FaLightbulb, FaLaptopCode, FaRegCalendarAlt, FaArrowRight } from "react-icons/fa";
+import { FaUniversity, FaGoogle, FaHandsHelping, FaLanguage, FaMicrophone, FaUsers, FaLightbulb, FaLaptopCode, FaRegCalendarAlt } from "react-icons/fa";
 
 const Timeline = () => {
   const timelineData = [
-    { date: "April 7–15, 2025", event: "Awareness campaign and team outreach" },
-    { date: "April 21–30, 2025", event: "Online Bootcamp and dataset introduction" },
-    { date: "May 1–23, 2025", event: "Ideation Sprint with mentor reviews" },
-    { date: "May 26–29, 2025", event: "In-person mentoring sessions" },
-    { date: "May 30, 2025", event: "Hackathon event" },
-    { date: "June 1 onwards, 2025", event: "Post-event feedback and follow-up" },
+    {
+      date: "April 7–15, 2025",
+      event: "Awareness campaign and team outreach",
+      description: "This phase focuses on promoting the hackathon, answering questions, and helping selected teams refine their pitched ideas.",
+    },
+    {
+      date: "April 21–30, 2025",
+      event: "Online Bootcamp and dataset introduction",
+      description: "The bootcamp will introduce participants to the dataset, tools, and key skills needed for the hackathon. After this phase, teams will be screened on May 1st, and successful candidates will move on to the next stage.",
+    },
+    {
+      date: "May 1–23, 2025",
+      event: "Ideation Sprint with mentor reviews",
+      description: "During this phase, teams will brainstorm solutions, develop initial concepts, and receive feedback from mentors. The top five finalists will be selected at the end of this phase.",
+    },
+    {
+      date: "May 26–29, 2025",
+      event: "In-person mentoring sessions",
+      description: "Finalists will arrive at the University of Ghana from May 25th. In-person mentoring sessions begin from May 26th to May 29th, followed by the hackathon grand finale on May 30th.",
+    },
+    {
+      date: "May 30, 2025",
+      event: "Hackathon event (Grand Finale)",
+      description: "May 30th 2025 marks the Hackathon event (Grand Finale). The top five finalists will showcase their solutions and compete for the winning spots. The hackathon winners will be announced, and awards will be presented.",
+    },
+    {
+      date: "June 1 onwards, 2025",
+      event: "Post-event feedback and follow-up",
+    },
   ];
 
   return (
     <div className="timeline-container mt-10 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-8 rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold text-center text-white mb-8">Timelines</h2>
-      <div className="timeline flex flex-wrap justify-center items-center space-x-8">
+      <div className="timeline flex flex-col items-center space-y-8">
         {timelineData.map((item, index) => (
-          <div key={index} className="timeline-item flex flex-col items-center mb-8 relative">
-            <div className="timeline-icon text-4xl text-secondary mb-2">
-              <FaRegCalendarAlt />
+          <div key={index} className="timeline-item flex flex-col items-center text-center">
+            <div className="timeline-marker w-6 h-6 bg-white rounded-full border-4 border-secondary mb-4"></div>
+            <div className="timeline-content">
+              <div className="timeline-date text-lg font-semibold text-white">{item.date}</div>
+              <div className="timeline-event text-xl font-bold text-white">{item.event}</div>
+              {item.description && (
+                <div className="timeline-description text-sm text-white mt-2">
+                  {item.description}
+                </div>
+              )}
             </div>
-            <div className="timeline-date text-lg font-semibold text-white">{item.date}</div>
-            <div className="timeline-event text-base text-white">{item.event}</div>
-            {index < timelineData.length - 1 && (
-              <div className="timeline-connector absolute top-1/2 transform -translate-y-1/2 left-full h-1 w-8 flex items-center justify-center">
-                <FaArrowRight className="text-secondary" />
-              </div>
-            )}
           </div>
         ))}
       </div>
