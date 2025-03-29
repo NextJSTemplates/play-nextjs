@@ -32,6 +32,9 @@ const Footer = () => {
                 <p className="text-base text-gray-7">
                   © 2025 Human Computer Interactions & Persuasive Technologies Laboratory{" "}
                 </p>
+                <p className="text-base text-gray-7">
+                Powered by Chamba Nanang (cyphahimself)
+                </p>
               </div>
             </div>
           </div>
