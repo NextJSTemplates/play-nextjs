@@ -1,10 +1,10 @@
 "use client"
 
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaUniversity, FaGoogle, FaHandsHelping, FaLanguage, FaMicrophone, FaUsers, FaLightbulb, FaLaptopCode, FaRegCalendarAlt } from "react-icons/fa";
+import { FaUniversity, FaGoogle, FaHandsHelping, FaLanguage, FaMicrophone, FaUsers, FaLightbulb, FaLaptopCode, FaRegCalendarAlt, FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
+import { teamDatabase } from "@/database/teamDatabase"; // Import the database
 
 const Timeline = () => {
   const timelineData = [
@@ -64,18 +64,29 @@ const Timeline = () => {
 
 const About = () => {
   const [password, setPassword] = useState("");
+  const [teamName, setTeamName] = useState(""); // Add state for team name
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false); // Add state for showing the pop-up
+  const [agreeToTerms, setAgreeToTerms] = useState(false); // Add state for the checkbox
 
   const handlePasswordSubmit = () => {
-    if (password === "mashallah") {
-      setIsAuthorized(true);
-      setNotificationMessage("Working on the dataset, out soon");
+    if (!agreeToTerms) {
+      setNotificationMessage("You must agree to the terms before proceeding.");
       setShowNotification(true);
       setTimeout(() => setShowNotification(false), 3000); // Hide notification after 3 seconds
+      return;
+    }
+    const team = teamDatabase.find((entry) => entry.teamName === teamName && entry.password === password);
+    if (team) {
+      setIsAuthorized(true);
+      setNotificationMessage("You can now access the dataset.");
+      setShowNotification(true);
+      setTimeout(() => setShowNotification(false), 3000); // Hide notification after 3 seconds
+      setShowPopup(false); // Close the pop-up
     } else {
-      setNotificationMessage("Incorrect password. Please try again.");
+      setNotificationMessage("Incorrect team name or password. Please try again.");
       setShowNotification(true);
       setTimeout(() => setShowNotification(false), 3000); // Hide notification after 3 seconds
     }
@@ -90,38 +101,27 @@ const About = () => {
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
             <div className="mb-12 max-w-[540px] lg:mb-0">
-              <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                The Centre for Digital Language Inclusion (CDLI) is led by the Global Disability Innovation Hub in partnership with University College London and University of Ghana, funded by UK aid’s AT2030 programme, alongside support from Google.org
+              <h2 className="mb-50 text-2xl leading-tight text-dark dark:text-white sm:text-3xl sm:leading-[1.2]">
+                The <Link href="https://cdl-inclusion.com" className="text-lg text-blue-300 hover:text-blue-500">Centre for Digital Language Inclusion (CDLI)</Link> is led by the <Link href="https://disabilityinnovation.com" className="text-lg text-blue-300 hover:text-blue-500">Global Disability Innovation Hub</Link> in partnership with University College London and <Link href="https://ug.edu.gh" className="text-lg text-blue-300 hover:text-blue-500">University of Ghana</Link>, funded by UK aid’s <Link href="https://at2030.org" className="text-lg text-blue-300 hover:text-blue-500">AT2030 programme</Link>, alongside support from <Link href="https://google.org" className="text-lg text-blue-300 hover:text-blue-500">Google.org</Link>.
               </h2>
-              <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
+              <p className="mb-10 text-lg leading-relaxed text-body-color dark:text-dark-6">
                 A curated dataset of selected Ghanaian languages namely Akan, Ewe, Ga, Dagbani, and Dagaare is available to participants to support their project.
               </p>
-              {!isAuthorized ? (
-                <div className="mt-4">
-                  <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
-                    Enter password to access dataset
-                  </label>
-                  <input
-                    id="password"
-                    type="password"
-                    placeholder="Enter password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  />
-                  <button
-                    onClick={handlePasswordSubmit}
-                    className="ml-2 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
-                  >
-                    Submit
-                  </button>
-                </div>
-              ) : (
-                <Link
-                  href="#"
+              {!isAuthorized && (
+                <button
+                  onClick={() => setShowPopup(true)}
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
                 >
-                  Dataset
+                  Enter Team Details
+                </button>
+              )}
+              {isAuthorized && (
+                <Link
+                  href="https://drive.google.com/drive/u/0/folders/1GaUsmKxr3Me7vGTlAIDxm6VjGWX8QV3r"
+                  target="_blank"
+                  className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  Access Dataset
                 </Link>
               )}
             </div>
@@ -282,6 +282,65 @@ const About = () => {
         {showNotification && (
           <div className="fixed bottom-4 left-4 bg-green-500 text-white px-4 py-2 rounded-md shadow-md z-50">
             {notificationMessage}
+          </div>
+        )}
+        {showPopup && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+            <div className="bg-white text-black px-8 py-6 rounded-lg shadow-lg w-[400px]">
+              <h3 className="text-xl font-bold mb-4 flex items-center">
+                <FaCheckCircle className="text-green-500 mr-2" />
+                Enter Team Details
+              </h3>
+              <label htmlFor="teamName" className="block mb-2 text-sm font-medium text-gray-700">
+                Team Name
+              </label>
+              <input
+                id="teamName"
+                type="text"
+                placeholder="Enter team name"
+                value={teamName}
+                onChange={(e) => setTeamName(e.target.value)}
+                className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-700">
+                Password
+              </label>
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <div className="flex items-center mb-4">
+                <input
+                  id="agreeToTerms"
+                  type="checkbox"
+                  checked={agreeToTerms}
+                  onChange={(e) => setAgreeToTerms(e.target.checked)}
+                  className="mt-1 mr-2"
+                />
+                <label htmlFor="agreeToTerms" className="text-sm text-gray-700 flex items-center">
+                  <FaExclamationTriangle className="text-yellow-500 mr-1" />
+                  I agree not to share the link to the dataset. Sharing the link will attract a penalty or disqualification.
+                </label>
+              </div>
+              <div className="flex justify-end space-x-2">
+                <button
+                  onClick={() => setShowPopup(false)}
+                  className="px-4 py-2 bg-gray-300 text-black rounded-md hover:bg-gray-400"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handlePasswordSubmit}
+                  className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
           </div>
         )}
         <Timeline />

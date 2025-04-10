@@ -40,7 +40,7 @@ const Hero = () => {
                 <div className="flex justify-center space-x-8">
                   <p className="mb-4 text-center text-base font-medium text-white/60 flex items-center">
                     <FaMapMarkerAlt className="mr-2" />
-                    Venue: University of Ghana, Legon
+                    Venue: <Link href="https://ug.edu.gh" className="text-base text-blue-300 hover:text-blue-500">University of Ghana, Legon</Link>
                   </p>
                   <p className="mb-4 text-center text-base font-medium text-white/60 flex items-center">
                     <FaCalendarAlt className="mr-2" />
