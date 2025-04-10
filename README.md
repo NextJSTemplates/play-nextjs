@@ -76,6 +76,10 @@ If you appreciate this project, please consider starring this repository. Your s
 For a wider range of options, feel free to browse our collection of [Next.js Templates, Boilerplates and Starter Kits](https://nextjstemplates.com/templates).
 
 ### Update Log
+**10 April 2025**
+- Fix peer deps issue
+- Update Next.js for security patch
+
 **29 Jan 2025**
 - Upgraded to Next.js 15
 - Using `Link` instead of `a` tag
