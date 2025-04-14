@@ -101,16 +101,16 @@ const About = () => {
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
             <div className="mb-12 max-w-[540px] lg:mb-0">
-              <h2 className="mb-50 text-2xl leading-tight text-dark dark:text-white sm:text-3xl sm:leading-[1.2]">
-                The <Link href="https://cdl-inclusion.com" className="text-lg text-blue-300 hover:text-blue-500">Centre for Digital Language Inclusion (CDLI)</Link> is led by the <Link href="https://disabilityinnovation.com" className="text-lg text-blue-300 hover:text-blue-500">Global Disability Innovation Hub</Link> in partnership with University College London and <Link href="https://ug.edu.gh" className="text-lg text-blue-300 hover:text-blue-500">University of Ghana</Link>, funded by UK aid’s <Link href="https://at2030.org" className="text-lg text-blue-300 hover:text-blue-500">AT2030 programme</Link>, alongside support from <Link href="https://google.org" className="text-lg text-blue-300 hover:text-blue-500">Google.org</Link>.
+              <h2 className="mb-6 text-2xl font-semibold leading-snug text-dark dark:text-white sm:text-3xl sm:leading-tight">
+                The <Link href="https://cdl-inclusion.com" className="text-blue-500 hover:underline">Centre for Digital Language Inclusion (CDLI)</Link> is led by the <Link href="https://disabilityinnovation.com" className="text-blue-500 hover:underline">Global Disability Innovation Hub</Link> in partnership with <Link href="https://ug.edu.gh" className="text-blue-500 hover:underline">University College London</Link> and <Link href="https://ug.edu.gh" className="text-blue-500 hover:underline">University of Ghana</Link>, funded by UK aid’s <Link href="https://at2030.org" className="text-blue-500 hover:underline">AT2030 programme</Link>, alongside support from <Link href="https://google.org" className="text-blue-500 hover:underline">Google.org</Link>.
               </h2>
-              <p className="mb-10 text-lg leading-relaxed text-body-color dark:text-dark-6">
+              <p className="mb-6 text-base leading-relaxed text-gray-700 dark:text-gray-300">
                 A curated dataset of selected Ghanaian languages namely Akan, Ewe, Ga, Dagbani, and Dagaare is available to participants to support their project.
               </p>
               {!isAuthorized && (
                 <button
                   onClick={() => setShowPopup(true)}
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-center text-sm font-medium text-white duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   Enter Team Details
                 </button>
@@ -119,7 +119,7 @@ const About = () => {
                 <Link
                   href="https://drive.google.com/drive/u/0/folders/1GaUsmKxr3Me7vGTlAIDxm6VjGWX8QV3r"
                   target="_blank"
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-center text-sm font-medium text-white duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   Access Dataset
                 </Link>
@@ -323,7 +323,7 @@ const About = () => {
                 />
                 <label htmlFor="agreeToTerms" className="text-sm text-gray-700 flex items-center">
                   <FaExclamationTriangle className="text-yellow-500 mr-1" />
-                  I agree not to share the link to the dataset. Sharing the link will attract a penalty or disqualification.
+                  I agree not to share the link to the dataset.
                 </label>
               </div>
               <div className="flex justify-end space-x-2">
