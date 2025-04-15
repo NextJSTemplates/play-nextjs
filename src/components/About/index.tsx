@@ -321,9 +321,9 @@ const About = () => {
                   onChange={(e) => setAgreeToTerms(e.target.checked)}
                   className="mt-1 mr-2"
                 />
-                <label htmlFor="agreeToTerms" className="text-sm text-gray-700 flex items-center">
-                  <FaExclamationTriangle className="text-yellow-500 mr-1" />
-                  I agree not to share the link to the dataset.
+                <label htmlFor="agreeToTerms" className="text-xs text-gray-700 flex items-center">
+                  <FaExclamationTriangle className="text-yellow-500 mr-2 text-6xl" />
+                  By ticking this box, you agree to the terms and conditions that the dataset and models provided are to be used exclusively for the purposes of the hackathon and must not be shared, distributed, or used for any other purpose outside the scope of this event.
                 </label>
               </div>
               <div className="flex justify-end space-x-2">
