@@ -84,6 +84,12 @@ For a wider range of options, feel free to browse our collection of [Next.js Tem
 
 ### Update Log
 
+**03 December 2025** - v2.2.2
+
+- Upgraded to Next.js 16
+- Update prisma latest version
+- Updated tailwindcss latest version
+
 **06 August 2025** - v2.2.1
 
 - fix: [#21](https://github.com/NextJSTemplates/play-nextjs/issues/21) - Moved context providers to `/src/app/providers.tsx`

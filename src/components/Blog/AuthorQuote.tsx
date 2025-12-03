@@ -3,7 +3,7 @@ import React from "react";
 const AuthorQuote = () => {
   return (
     <div
-      className="wow fadeInUp relative z-10 mb-10 overflow-hidden rounded bg-primary bg-opacity-5 px-6 py-8 text-center sm:p-10 md:px-[60px]"
+      className="wow fadeInUp relative z-10 mb-10 overflow-hidden rounded bg-primary/5 px-6 py-8 text-center sm:p-10 md:px-[60px]"
       data-wow-delay=".1s"
     >
       <div className="mx-auto max-w-[530px]">
